@@ -1,4 +1,26 @@
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Source+Sans+Pro&display=swap');
+
+/* We did this on class with the proffessor to size it for phones*/
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px; /*This is now 1rem*/
+}
+nav>ul, footer>ul{
+    list-style: none;
+    margin:0;
+    padding: 0;
+}
+/*Here ends proffesor code*/
+
+
+
 a:hover {
     color: green;
   }
