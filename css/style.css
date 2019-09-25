@@ -1,52 +1,61 @@
 
+a:hover {
+    color: green;
+  }
 
-header, footer{
-    background-color: navy;
-    padding: .5px;
+a {
+    color:#8B0000;
+}
+ul {
+    margin-left: 100px;
+    padding: 1em;
     
 }
 
-ul {
-    padding: 1em;
-    margin-left: 100px;
+li {
+    padding: .7em;
+    font-size: 24px;
+    font-family: sans-serif;
 }
 
-li {
-    padding: .5em;
-    font-size: 22px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+header, footer{
+    padding: .5px;
+    background-color:#008B8B;
+   
 }
 
 footer {
-    display: flex;
+    text-align: center;
+    padding: 5px;
+    align-items: center;
+    color: white;
+    font-family: Verdana;
     clear: both;
     flex-flow: row wrap;
     justify-content: center;
-    text-align: center;
-    padding: 10px;
-    align-items: center;
-    color: rgb(5, 56, 90);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
 }
 
 h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(5, 56, 90);
     margin-left: 55px;
     font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    
     
 }
 
 h2 {
     margin-left: 55px;
     font-size: 30px;   
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Verdana, sans-serif;
 }
 
 img {
+    margin: 20px 80px 20px 4px;
+    box-shadow: 3px 3px 3px #008B8B;
     position: relative;
     float: right;
     height: 365px;
-    margin: 25px 85px 25px 2px;
-    box-shadow: 3px 3px 3px black;
+    
 }
