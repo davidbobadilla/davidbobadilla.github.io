@@ -81,3 +81,9 @@ img {
     height: 365px;
     
 }
+
+@media only screen and (min-width: 60em) {
+	.l02content {
+		grid-template-columns: 1fr 1fr 1fr;
+    }
+}
