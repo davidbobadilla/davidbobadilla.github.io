@@ -36,7 +36,11 @@
     
     <footer>
         <div> | David Bobadilla | <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5"> MDN Documentation Site</a> | BYU-Idaho
-        <br>Last Updated:09/23/2019 12:00 PM 
+               
+        <br><p id="demo"> Last Updated:<script>
+            var d = new Date();
+            document.getElementById("demo").innerHTML = d;
+            </script>  </p>
     </div>
     </footer>
 </div>    
