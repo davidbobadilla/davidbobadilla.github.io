@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Source+Sans+Pro&display=swap');
 @import "/css/normalize.css";
 
-/* We did this on class with the proffessor to size it for phones*/
+/* We did this on class with the proffessor to size it for phones
 html {
     box-sizing: border-box;
 }
@@ -11,14 +11,14 @@ html {
 }
 
 body {
-    font-size: 18px; /*This is now 1rem*/
+    font-size: 18px; /*This is now 1rem
 }
 nav>ul, footer>ul{
     list-style: none;
     margin:0;
     padding: 0;
 }
-/*Here ends proffesor code*/
+Here ends proffesor code */
 
 
 
@@ -85,7 +85,7 @@ img {
 #grid {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 10px;
+    /* padding: 4px; */
     font-size: 0.8rem;
     border: 1px;
     
@@ -93,96 +93,74 @@ img {
     
 }
 #one {
-    grid-column: 1/2;
-    grid-row: 1/3;
+    /* grid-column: 1/2;*/
+    
     background-color: aquamarine;
+    max-width: 460px;
 }
 #two {
-    grid-column: 1/2;
-    grid-row: 1/2;
+    /* grid-column: 1/2;*/
+   
     background-color: skyblue;
+    max-width: 460px;
 }
 #three {
-    grid-column: 1/2;
-    grid-row: 1/3;
+    /* grid-column: 1/2;*/
     background-color: greenyellow;
+    max-width: 460px;
+}
+
+
+/* tablets view*/
+@media only screen and (min-width: 500px) {
+	#grid {
+        
+        grid-template-columns: 1fr 1fr;
+        
+        padding: 4px;
+        font-size: 18px;
+        /* grid-row-end: auto; */
+        
+    }
+    /* #one {
+        grid-column: 1/2;
+        
+    }
+    #two {
+        grid-column: 2/3;
+       
+    }
+    #tree {
+        grid-column: 3/4;
+        
+    } */
+   
 }
 /*Desktop view*/
-@media only screen and (min-width: 60em) {
+@media only screen and (min-width: 900px) {
 	#grid {
-        display: grid;
+      
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        padding: 40px;
+       
+        padding: 4px;
         font-size: 18px;
         grid-row-end: auto;
         
     }
-    #one {
+    /* #one {
         grid-column: 1/2;
-        grid-row: 1/3;
+        
         background-color: aquamarine;
     }
     #two {
         grid-column: 2/3;
-        grid-row: 1/3;
+        
         background-color: skyblue;
     }
     #three {
         grid-column: 3/4;
-        grid-row: 1/3;
-        background-color: greenyellow;
-    }
-   
-}
-
-/* tablets view*/
-@media only screen and (min-width: 37.5em) {
-	#grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
-        padding: 40px;
-        font-size: 18px;
-        grid-row-end: auto;
         
-    }
-    #one {
-        grid-column: 1/2;
-        grid-row: 1/6;
-    }
-    #two {
-        grid-column: 2/3;
-        grid-row: 1/6;
-    }
-    #tree {
-        grid-column: 3/4;
-        grid-row: 1/6;
-    }
+        background-color: greenyellow;
+    } */
    
 }
-
-/* #four {
-        grid-column: 1/2;
-        grid-row: 4/5;
-
-    }
-    #five {
-        grid-column: 1/4;
-        grid-row: 5/6;
-    }
-    #six {
-        grid-area: 2/3/1/2;
-    }
-    #seven {
-        grid-area: 2/3/3/4;
-    }
-    #eight {
-        grid-area: 2/3/5/6;
-    }
-    #nine {
-        grid-area: 2/3/7/8;
-    }
-    #ten {
-        grid-area: 2/3/9/10;
-    }*/
