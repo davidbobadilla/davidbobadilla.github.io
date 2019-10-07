@@ -3,10 +3,5 @@
     grid-template: 1fr 1fr 1fr 1fr;
 }
 body{
-    background-color: skyblue;
-}
-nav{
-    display: grid;
-    grid-column: auto auto auto auto;
-
+    background-color: #FCFCFC;
 }
