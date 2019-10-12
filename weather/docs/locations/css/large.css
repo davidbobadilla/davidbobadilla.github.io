@@ -94,6 +94,9 @@ a:hover {
     text-align: center;
     max-width: 60 em;
     margin:.9em;
-
   }
- 
+
+ span{
+     color: white;
+     font-size: 18px;
+ }
