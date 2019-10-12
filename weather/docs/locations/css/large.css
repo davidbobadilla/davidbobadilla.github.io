@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
 .main-container{
     max-width: 60 em;
     margin:.9em;
-    
 }
 #bottom {
     color:white;
@@ -25,20 +27,31 @@ footer{
     background-color: #3F774D;
 
 }
-ul li{
+ul li a{
     flex-direction: row;
     color:white;
     margin: 1px;
     padding:3px;
+    font-size: 18px;
+    font-family: 'Oswald';
+    list-style-type: none;
+}
+li{
     list-style-type: none;
 }
 
-
-li:hover {
+a:hover {
     background-color: navy;
   }
- li:active {
+ a:active {
     color: red;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: .5em;
+    row-gap: .5em;
   }
   footer{
       background-color: #3F5077;
