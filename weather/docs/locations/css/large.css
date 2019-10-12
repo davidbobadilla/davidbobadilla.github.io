@@ -59,11 +59,11 @@ a:hover {
     row-gap: .5em;
   }
   main section {
-    background-color: #253A67;
+    background-color: yellow;
   }
   
   .location {
-    background-color: #2c4e99;
+    background-color:aqua;
   }
   
   .location h1 {
