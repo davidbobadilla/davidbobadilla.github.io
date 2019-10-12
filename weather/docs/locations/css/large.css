@@ -1,0 +1,47 @@
+.main-container{
+    max-width: 60 em;
+    margin:.9em;
+    
+}
+hr {
+    color:white;
+}
+footer{
+    max-width: 60 em;
+    margin:.9em;
+}
+.logobox {
+    display: flex;
+    flex: 1;
+    background-color:#3F5077;
+    color: white;
+    width: 100%;
+    margin: 5px;
+    
+}
+.navegacion{
+    display:flex;
+    justify-content: space-evenly;
+    background-color: #3F774D;
+
+}
+ul li{
+    flex-direction: row;
+    color:white;
+    margin: 1px;
+    padding:3px;
+    list-style-type: none;
+}
+
+
+li:hover {
+    background-color: navy;
+  }
+ li:active {
+    color: red;
+  }
+  footer{
+      background-color: #3F5077;
+
+  }
+ 
