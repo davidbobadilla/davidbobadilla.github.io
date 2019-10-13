@@ -49,14 +49,11 @@ a:hover {
 
 
 
-
-
-
   main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: .5em;
-    row-gap: .5em;
+    column-gap: .4em;
+    row-gap: .4em;
   }
   main section {
     background-color: yellow;
@@ -82,12 +79,6 @@ a:hover {
   }
 
 
-
-
-
-
-
-  
   footer{
     background-color: #3F5077;
     padding: 1em 0 1em 0;
