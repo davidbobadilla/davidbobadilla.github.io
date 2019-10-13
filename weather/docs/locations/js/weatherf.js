@@ -6,14 +6,14 @@ function current() {
     var monthName = longMonthNames[todaysDate.getMonth()];
     document.getElementById("current").innerHTML = dayName + ", " + todaysDate.getDate() + " " + monthName + " " + todaysDate.getFullYear();
 }
-//gets the curreent year and displays the copyright info
+
 function copyright() {
     var todaysDate = new Date();
     var current = todaysDate.getFullYear();
     document.getElementById('copyright').innerHTML = "&copy; " + current;
 }
 
-//calls the listed funciton after page has loaded
+
 window.onload = current();
 window.onload = copyright();
 
