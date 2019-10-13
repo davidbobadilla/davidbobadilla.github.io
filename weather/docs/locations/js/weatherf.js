@@ -17,6 +17,6 @@ function copyright() {
 window.onload = current();
 window.onload = copyright();
 
-function toggleMenu() {
+/*function toggleMenu() {
     document.getElementsByClassName("navigation")[0].classList.toggle("responsive");
-}
+}*/
