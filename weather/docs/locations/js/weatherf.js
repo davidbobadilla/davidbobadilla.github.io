@@ -16,3 +16,7 @@ function copyright() {
 //calls the listed funciton after page has loaded
 window.onload = current();
 window.onload = copyright();
+
+function toggleMenu() {
+    document.getElementsByClassName("navigation")[0].classList.toggle("responsive");
+}
