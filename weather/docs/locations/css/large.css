@@ -52,8 +52,9 @@ a:hover {
   main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: .4em;
     row-gap: .4em;
+    column-gap: .4em;
+    
   }
   main section {
     background-color: yellow;
@@ -64,7 +65,7 @@ a:hover {
   }
   
   .location h1 {
-    margin: .5em .5em 0 .5em;
+    margin: .4em .4em 0 .4em;
   }
   .location {
     grid-column: span 3;
