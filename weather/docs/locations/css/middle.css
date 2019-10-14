@@ -44,5 +44,36 @@ a:hover {
  a:active {
     color: red;
   }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  main section {
+    background-color: yellow;
+  }
+  
+  .location {
+    background-color:aqua;
+  }
+  
+  .location h1 {
+    margin: .4em .4em 0 .4em;
+  }
+  .location {
+    grid-column: span 2;
+  }
 
+  .current-condition {
+    grid-column: span 2;
+  }
+
+  .forecast {
+    grid-column: span 2;
+  }
+  .temperature{
+    grid-column: span 2;
+  }
+  .precipitation{
+    grid-column: span 2;
+  }
 }
