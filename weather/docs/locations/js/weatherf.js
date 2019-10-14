@@ -18,7 +18,7 @@ window.onload = current();
 window.onload = copyright();
 
 /*function toggleMenu() {
-    document.getElementsByClassName("navigation")[0].classList.toggle("responsive");
+    document.getElementsByClassName("navigacion")[0].classList.toggle("responsive");
 
     html
     <button onclick="toggleMenu()">☰ Menu</button>
