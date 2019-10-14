@@ -76,4 +76,16 @@ a:hover {
   .precipitation{
     grid-column: span 2;
   }
+  footer{
+    background-color: #3F5077;
+    padding: 1em 0 1em 0;
+    text-align: center;
+    max-width: 60 em;
+    margin:.9em;
+  }
+
+ span{
+     color: white;
+     font-size: 18px;
+ }
 }
