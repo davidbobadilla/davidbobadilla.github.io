@@ -4,43 +4,6 @@
       max-width: 800px;
     }
   
-    /* header */
-    header {
-      margin-bottom: .5em;
-    }
-    header>img {
-      max-width: 5em;
-      margin: 0 2em 0 0;
-    }
-    header>section>h1 {
-      font-size: 3em;
-    }
-    
-    /* navigation */
-    nav {
-      position: relative;
-      bottom: unset;
-      z-index: unset;
-      width: auto;
-      font-size: 14px;
-      margin-bottom: .5em
-    }
-  
-    nav ul {
-      flex-direction: row;
-    }
-  
-    .navigacion li {
-      display: unset;
-      flex: 1 1 100%;
-    }
-  
-    nav button {
-      display: none;
-    }
-    
-    /* main */
-  
     main {
       grid-template-columns: 1fr 1fr;
     }
@@ -56,11 +19,3 @@
     .forecast {
       grid-column: span 2;
     }
-    /* footer */
-    footer {
-      z-index: 0;
-      font-size: 14px;
-      position: relative;
-      bottom: auto;
-    }  
-  }
