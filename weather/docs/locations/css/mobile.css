@@ -50,20 +50,25 @@ a:hover {
 
 .location{
   grid-column: span 1;
+  background-color:aqua;
 }
 .temperature{
   grid-column: span 1;
+  background-color:aqua;
 }
 
 .current-condition{
   grid-column: span 1;
+  background-color:aqua;
 }
 
 .precipitation{
   grid-column: span 1;
+  background-color:aqua;
 }
 .forecast{
   grid-column: span 1;
+  background-color:aqua;
 }
 nav ul {
   flex-direction: row;
