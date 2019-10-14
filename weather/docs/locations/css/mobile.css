@@ -50,7 +50,7 @@ a:hover {
 
 .location{
   grid-column: span 1;
-  background-color:rgb(127, 255, 202);
+  background-color:aqua;
 }
 .temperature{
   grid-column: span 1;
