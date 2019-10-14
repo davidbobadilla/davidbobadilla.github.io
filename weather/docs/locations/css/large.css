@@ -79,7 +79,12 @@ a:hover {
   .forecast {
     grid-column: span 1;
   }
-
+  .temperature{
+    grid-column: span 1;
+  }
+  .precipitation{
+    grid-column: span 1;
+  }
 
   footer{
     background-color: #3F5077;
