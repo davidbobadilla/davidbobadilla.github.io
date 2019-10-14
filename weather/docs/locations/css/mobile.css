@@ -1,1 +1,27 @@
-@media only screen and (max-width: 475px) {}
+@media only screen and (max-width: 475px) {
+
+  main{
+    grid-template-columns: 1fr;
+  }
+
+.location{
+  grid-column: span 1;
+}
+.temperature{
+  grid-column: span 1;
+}
+
+.current-condition{
+  grid-column: span 1;
+}
+
+.precipitation{
+  grid-column: span 1;
+}
+.forecast{
+  grid-column: span 1;
+}
+nav ul {
+  flex-direction: row;
+}
+}
