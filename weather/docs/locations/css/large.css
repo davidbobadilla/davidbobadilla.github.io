@@ -55,21 +55,21 @@ a:hover {
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: .4em;
     column-gap: .4em;
+    background-color:#3F5077;
     
   }
-  main section {
+  /* main section {
     background-color: yellow;
-  }
+  } */
   
   .location {
-    background-color:aqua;
+    background-color:#3F5077;
+    color: white;
+    grid-column: span 3;
   }
   
   .location h1 {
     margin: .4em .4em 0 .4em;
-  }
-  .location {
-    grid-column: span 3;
   }
 
   .current-condition {
@@ -131,6 +131,9 @@ height: 35px;
 border-radius: 100%;
 background-color: blue;
 position: relative; top:-47px; left: 70px
+}
+#pcomp{
+  max-width: auto;
 }
  
  #o1 {position: absolute; top: -20px; left: 10px;}
