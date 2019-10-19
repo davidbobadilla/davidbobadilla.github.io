@@ -115,10 +115,12 @@ a:hover {
 }
 #precip {
 position: relative;
-/* font-size: 26px;
-letter-spacing: -2px;
-min-width: 300px;
-align-content: space-around; */
+letter-spacing: .3px;
+font-size: 26px;
+min-width: 50px;
+/* 
+
+ */
 }
 #mid {
 position: relative;
@@ -135,7 +137,7 @@ position: relative; top:-35px; left: -5px
 
 }
 
-#pcomp {{margin: 10px auto;position: relative;}
+#pcomp {(margin: 10px auto;position: relative;}
 h1, h2, p {margin: 0;}
 background: radial-gradient(circle, transparent 40%, gray 40%);
 border-radius: 100%;
@@ -146,7 +148,7 @@ position: relative;
 }
 }
 
- /* component inner component ring */
+ 
  #o1 {position: absolute; top: -20px; left: 10px;}
  #o2 {position: absolute; top: 15px; left: 168px;}
  #o3 {position: absolute; top: 72px; left: 182px;}
@@ -169,8 +171,6 @@ position: relative;
  #i7 {position: absolute; top: 128px; left: 44px;}
  #i8 {position: absolute; top: 105px; left: 20px;}
  #i9 {position: absolute; top: 72px; left: 12px;}
- #i10 {position: absolute; top: 38px; left: 11px;}
- #i11 {position: absolute; top: 13px; left: 34px;}
- #i12 {position: absolute; top: 5px; left: 70px; }
-/* end component styling */
-}
+ #i10 {position: absolute; top: 38px; left: 15px;}
+ #i11 {position: absolute; top: 15px; left: 42px;}
+ #i12 {position: absolute; top: 5px; left: 75px; }
