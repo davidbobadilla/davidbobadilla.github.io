@@ -70,20 +70,27 @@ a:hover {
   
   .location h1 {
     margin: .4em .4em 0 .4em;
+
   }
 
   .current-condition {
     grid-column: span 3;
+    background-color:#3F774D;
+    color:white;
+    font-size: 26px;
   }
 
   .forecast {
     grid-column: span 1;
+    background-color:white;
   }
   .temperature{
     grid-column: span 1;
+    background-color:white;
   }
   .precipitation{
     grid-column: span 1;
+    background-color:white;
   }
 
   footer{
