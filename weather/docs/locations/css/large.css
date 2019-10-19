@@ -137,7 +137,7 @@ position: relative; top:-35px; left: -5px
 
 }
 
-#pcomp {(margin: 10px auto;position: relative;}
+#pcomp {{margin: 10px auto;position: relative;}
 h1, h2, p {margin: 0;}
 background: radial-gradient(circle, transparent 40%, gray 40%);
 border-radius: 100%;
