@@ -21,6 +21,7 @@ footer{
 }
 .navegacion{
   display:flex;
+  flex-direction: column;
   justify-content: space-evenly;
   background-color: #3F774D;
 
