@@ -125,6 +125,13 @@ border-radius: 100%;
 background-color: blue;
 position: relative; top:-47px; left: 70px
 }
+.ballt {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  background-color: blue;
+  position: relative; top:-41px; left: 70px
+  }
 #pcomp{
 max-width: auto;
 }
