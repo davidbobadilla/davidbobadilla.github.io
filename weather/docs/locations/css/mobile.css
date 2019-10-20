@@ -24,6 +24,7 @@ footer{
   flex-direction: column;
   justify-content: space-evenly;
   background-color: #3F774D;
+  margin: 2px;
 
 }
 ul li a{
