@@ -132,7 +132,13 @@ position: relative; top:-47px; left: 70px
   background-color: blue;
   position: relative; top:-41px; left: 70px
   }
-#pcomp{
+#pcomp1{
+  max-width: auto;
+}
+#pcomp2{
+  max-width: auto;
+}
+#pcomp3{
   max-width: auto;
 }
  
