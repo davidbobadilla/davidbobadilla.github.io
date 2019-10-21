@@ -120,12 +120,24 @@ a:hover {
   margin: 65px auto 65px auto;
   position: relative;
 }
-#precip {
-position: relative;
-letter-spacing: .3px;
-font-size: 26px;
-min-width: 50px;
-}
+#precip1 {
+  position: relative;
+  letter-spacing: .3px;
+  font-size: 26px;
+  min-width: 50px;
+  }
+  #precip2 {
+    position: relative;
+    letter-spacing: .3px;
+    font-size: 26px;
+    min-width: 50px;
+    }
+  #precip3 {
+      position: relative;
+      letter-spacing: .3px;
+      font-size: 26px;
+      min-width: 50px;
+      }
 #mid {
 position: relative;
 top: 65px;
