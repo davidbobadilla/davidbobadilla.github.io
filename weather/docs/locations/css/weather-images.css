@@ -68,10 +68,13 @@ section>img {
   transition: filter 0.5s;
 }
 
-footer>section {
-  max-width: 1200px;
-  text-align: center;
-}
+footer{
+    background-color: #3F5077;
+    padding: 1em 0 1em 0;
+    text-align: center;
+    max-width: 60 em;
+    margin:.9em;
+  }
 
 .main-container {
   max-width: 1100px;
