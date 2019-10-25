@@ -4,34 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/weather/docs/locations/css/weather-images.css" media="screen">
+    <script src="/weather/docs/locations/js/weatherf.js" async></script>
     <title>Document</title>
 </head>
 <body>
+    <div class="main-container"> 
     <header>
         <h1>Progresive Loading Images</h1>
     </header>
-    <main>
-        <picture>
-            <img src="/Images/clear-small.jpg" data-src="" alt="clear sky picture">
-        </picture>
+    <nav>
+        <a href="/index.html">Home Page</a>
+      </nav>
 
-        <picture>
-                <img src="/Images/clouds-small.jpg" data-src="" alt="clouds picture">
-        </picture>
+      <main>
+      <div class="flex">
+        <section>
+          <picture>
+            <source media="(min-width: 600px)" srcset="/Images/weather600w/clear-600w.jpg">            
+            <img data-src="/Images/weather250w/clear-w300.jpg" src="/Images/loading/loadimage.svg" alt="Clear weather">
+          </picture>
+        </section>
 
-        <picture>
-                <img src="/Images/fog-small.jpg" data-src="" alt="fog picture">
-        </picture>
+        <section>
+          <picture>
+            <source media="(min-width: 600px)" srcset="/Images/weather600w/clouds-600w.jpg">            
+            <img data-src="/Images/weather250w/clouds-w300.jpg" src="/Images/loading/loadimage.svg" alt="Cloudy weather">
+          </picture>
+        </section>
 
-        <picture>
-                <img src="/Images/rain-small.jpg" data-src="" alt="rain picture">
-        </picture>
+        <section>
+          <picture>
+            <source media="(min-width: 600px)" srcset="/Images/weather600w/fog-600w.jpg">
+            <img data-src="/Images/weather250w/fog-w300.jpg" src="/Images/loading/loadimage.svg" alt="Foggy weather">
+          </picture>
+        </section>
 
-        <picture>
-                <img src="/Images/snow-small.jpg" data-src="" alt="snow picture">
-        </picture>
-
+        <section>
+          <picture>
+            <source media="(min-width: 600px)" srcset="/Images/weather600w/rain-600w.jpg">            
+            <img data-src="/Images/weather250w/rain-w300.jpg" src="/Images/loading/loadimage.svg" alt="Rainy weather">
+          </picture>
+        </section>
+        
+        <section>
+          <picture>
+            <source media="(min-width: 600px)" srcset="/Images/weather600w/snow-600w.jpg">            
+            <img data-src="/Images/weather250w/snow-w300.jpg" src="/Images/loading/loadimage.svg" alt="Snowy weather">
+          </picture>
+        </section>
+      </div>
     </main>
-    
+    <footer>
+    <div>
+        <span id="copyright">© 2019 </span>
+         
+        <span id="current"> Friday, 11 October 2019</span>
+    </div>
+
+ </footer>
+</div>    
 </body>
 </html>
