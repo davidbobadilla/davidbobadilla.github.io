@@ -44,10 +44,10 @@ let observer = new IntersectionObserver ((input, observer) => {
   })
 }, options);
 
-// let options = {
-//   threshold: 1,
-//   rootMargin: "0px 0px 0px 0px"
-// };
+let options = {
+  threshold: 1,
+  rootMargin: "0px 0px 0px 0px"
+};
 
 photos.forEach(image => {
   observer.observe(image);
