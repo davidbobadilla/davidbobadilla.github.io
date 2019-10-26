@@ -32,10 +32,11 @@ img {
 }
 
 section {
-  max-width: 600px;
-  background-color: whitesmoke;
+  
   margin: 2em;
   padding: .1em;
+  max-width: 600px;
+  background-color: whitesmoke;
 }
 
 [data-src] {
@@ -60,9 +61,10 @@ footer{
   }
 
 .main-container {
-  max-width: 1000px;
   width: 100%;
   margin: auto;
+  max-width: 1000px;
+ 
 }
 
 
