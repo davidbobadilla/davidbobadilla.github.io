@@ -1,3 +1,6 @@
+//The notes are what I got from the activities and my struggles getting this to work.
+
+
 // <!-- this will make the html to load first. PUT THIS HTML-->
 // <script src="app.js" defer></script>
 // <!-- place holder--> 
@@ -19,8 +22,6 @@
 
 
 
-
-//Josh
 let photos = document.querySelectorAll("[data-src]");
 
 function preload(img) {
@@ -30,8 +31,6 @@ function preload(img) {
   }
   img.src = src;
 }
-
-
 
 let observer = new IntersectionObserver ((input, observer) => {
   input.forEach (entry => {
@@ -54,7 +53,7 @@ photos.forEach(image => {
   observer.observe(image);
 });
 
-//end josh
+
 
 //This one is the good one
 // if('IntersectionObserver' in window) {
