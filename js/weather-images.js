@@ -31,24 +31,27 @@ function preload(img) {
   img.src = src;
 }
 
-let imgoptions = {
-  threshold: 1,
-  rootMargin: "0px 0px 200px 0px"
-};
 
-let imgObserver = new IntersectionObserver((entries, imgObserver) => {
-  entries.forEach(entry => {
+
+let observer = new IntersectionObserver ((input, observer) => {
+  input.forEach (entry => {
     if (!entry.isIntersecting) {
       return;
-    } else {
+    } 
+    else {
       preload(entry.target);
-      imgObserver.unobserve(entry.target);
+      observer.unobserve(entry.target);
     }
   })
-}, imgoptions);
+}, options);
+
+let options = {
+  threshold: 1,
+  rootMargin: "0px 0px 0px 0px"
+};
 
 photos.forEach(image => {
-  imgObserver.observe(image);
+  observer.observe(image);
 });
 
 //end josh
