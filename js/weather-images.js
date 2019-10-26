@@ -16,6 +16,8 @@
 // imagesToLoad.forEach((img) => {
 //   loadImages(img);
 // });
+const images = document.querySelectorAll("[data-src]");
+
 if('IntersectionObserver' in window) {
   const observer = new IntersectionObserver((items, observer) => {
     items.forEach((item) => {
