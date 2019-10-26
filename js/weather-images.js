@@ -116,7 +116,7 @@
 
 let photos = document.querySelectorAll("[data-src]");
 
-function preloadImage(img) {
+function preload(img) {
   let src = img.getAttribute("data-src");
   if (!src) {
     return;
@@ -134,7 +134,7 @@ let imgObserver = new IntersectionObserver((entries, imgObserver) => {
     if (!entry.isIntersecting) {
       return;
     } else {
-      preloadImage(entry.target);
+      preload(entry.target);
       imgObserver.unobserve(entry.target);
     }
   })
