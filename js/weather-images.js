@@ -124,7 +124,7 @@ function preload(img) {
   img.src = src;
 }
 
-let imgOptions = {
+let options = {
   threshold: 1,
   rootMargin: "0px 0px 200px 0px"
 };
@@ -138,7 +138,7 @@ let imgObserver = new IntersectionObserver((entries, imgObserver) => {
       imgObserver.unobserve(entry.target);
     }
   })
-}, imgOptions);
+}, options);
 
 photos.forEach(image => {
   imgObserver.observe(image);
