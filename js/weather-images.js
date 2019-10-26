@@ -26,7 +26,7 @@ let photos = document.querySelectorAll("[data-src]");
 
 function preload(img) {
   let src = img.getAttribute("data-src");
-  if (src) {
+  if (!src) {
     return;
   }
   img.src = src;
