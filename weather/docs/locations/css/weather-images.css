@@ -15,7 +15,6 @@ h1 {
 
 header {
   background-color: #253A67;
-  text-align: center;
 }
 
 nav {
@@ -37,7 +36,6 @@ section {
   background-color: whitesmoke;
   margin: 2em;
   padding: .1em;
-  /* flex: 1 1 auto; */
 }
 
 [data-src] {
