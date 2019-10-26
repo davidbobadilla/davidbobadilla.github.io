@@ -22,21 +22,11 @@ nav {
   background-color: rgb(21, 202, 226);
 }
 
-/* nav a {
-  display: inline-block;
-  padding: 1em;
-  text-decoration: none;
-  color: white;
-} */
-/* 
-nav a:hover {
-  background-color: #253A67;
-  color: greenyellow;
-} */
-/* 
-nav a:active {
-  background-color: #253A67;
-} */
+.flex {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
 
 img {
   width: 100%;
@@ -77,8 +67,4 @@ footer{
   margin: auto;
 }
 
-.flex {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
+
