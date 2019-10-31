@@ -93,6 +93,7 @@ a:hover {
      color: white;
      font-size: 18px;
  }
+
  * {
   box-sizing: border-box;
   margin: 0;
@@ -106,30 +107,18 @@ a:hover {
   margin: 65px auto 65px auto;
   position: relative;
 }
-#precip1 {
-position: relative;
-letter-spacing: .3px;
-font-size: 26px;
-min-width: 50px;
-}
-#precip2 {
+.precip1 {
   position: relative;
   letter-spacing: .3px;
   font-size: 26px;
   min-width: 50px;
   }
-#precip3 {
-    position: relative;
-    letter-spacing: .3px;
-    font-size: 26px;
-    min-width: 50px;
-    }
 
-#mid {
+.mid {
 position: relative;
-top: 57px;
-left: 55px;
-font-size: 36px;
+top: 65px;
+left: 60px;
+font-size: 40px;
 }
 .ball {
 width: 35px;
@@ -138,46 +127,40 @@ border-radius: 100%;
 background-color: blue;
 position: relative; top:-47px; left: 70px
 }
-.ballt {
-  width: 35px;
-  height: 35px;
-  border-radius: 100%;
-  background-color: blue;
-  position: relative; top:-41px; left: 70px
+
+  /* .pcomp1{
+    max-width: auto;
   }
-#pcomp1{
-  max-width: auto;
-}
-#pcomp2{
-  max-width: auto;
-}
-#pcomp3{
-  max-width: auto;
-}
+  .pcomp2{
+    max-width: auto;
+  }
+  .pcomp3{
+    max-width: auto;
+  } */
  
- #o1 {position: absolute; top: -20px; left: 10px;}
- #o2 {position: absolute; top: 15px; left: 168px;}
- #o3 {position: absolute; top: 72px; left: 182px;}
- #o4 {position: absolute; top: 120px; left: 168px;}
- #o5 {position: absolute; top: 160px; left: 130px;}
- #o6 {position: absolute; top: 175px; left: 70px;}
- #o7 {position: absolute; top: 160px; left: 10px;}
- #o8 {position: absolute; top: 120px; left: -28px;}
- #o9 {position: absolute; top: 70px; left: -35px;}
- #o10 {position: absolute; top: 15px; left: -28px;}
- #o11 {position: absolute; top: -20px; left:135px;}
- #o12 {position: absolute; top: -35px; left: 70px;}
+ .o1 {position: absolute; top: -20px; left: 10px;}
+ .o2 {position: absolute; top: 15px; left: 168px;}
+ .o3 {position: absolute; top: 72px; left: 182px;}
+ .o4 {position: absolute; top: 120px; left: 168px;}
+ .o5 {position: absolute; top: 160px; left: 130px;}
+ .o6 {position: absolute; top: 175px; left: 70px;}
+ .o7 {position: absolute; top: 160px; left: 10px;}
+ .o8 {position: absolute; top: 120px; left: -28px;}
+ .o9 {position: absolute; top: 70px; left: -35px;}
+ .o10 {position: absolute; top: 15px; left: -28px;}
+ .o11 {position: absolute; top: -20px; left:135px;}
+ .o12 {position: absolute; top: -35px; left: 70px;}
  
- #i1 {position: absolute; top: 13px; left: 114px;}
- #i2 {position: absolute; top: 38px; left: 136px;}
- #i3 {position: absolute; top: 72px; left: 145px;}
- #i4 {position: absolute; top: 105px; left: 134px;}
- #i5 {position: absolute; top: 128px; left: 110px;}
- #i6 {position: absolute; top: 136px; left: 77px;}
- #i7 {position: absolute; top: 128px; left: 44px;}
- #i8 {position: absolute; top: 105px; left: 20px;}
- #i9 {position: absolute; top: 72px; left: 12px;}
- #i10 {position: absolute; top: 38px; left: 10px;}
- #i11 {position: absolute; top: 13px; left: 37px;}
- #i12 {position: absolute; top: 5px; left: 75px; }
+ .i1 {position: absolute; top: 13px; left: 114px;}
+ .i2 {position: absolute; top: 38px; left: 136px;}
+ .i3 {position: absolute; top: 72px; left: 145px;}
+ .i4 {position: absolute; top: 105px; left: 134px;}
+ .i5 {position: absolute; top: 128px; left: 110px;}
+ .i6 {position: absolute; top: 136px; left: 77px;}
+ .i7 {position: absolute; top: 128px; left: 44px;}
+ .i8 {position: absolute; top: 105px; left: 20px;}
+ .i9 {position: absolute; top: 72px; left: 12px;}
+ .i10 {position: absolute; top: 38px; left: 10px;}
+ .i11 {position: absolute; top: 13px; left: 37px;}
+ .i12 {position: absolute; top: 5px; left: 75px;}
 }
