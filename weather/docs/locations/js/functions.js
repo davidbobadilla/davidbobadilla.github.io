@@ -1,5 +1,10 @@
 'use strict';
 
+// Listen for the DOM to finish building
+document.addEventListener("DOMContentLoaded", function(){
+
+})
+
 // Weather Site JavaScript Functions
 
 console.log('My javascript is being read.');
@@ -24,3 +29,17 @@ function copyright() {
 
 window.onload = current();
 window.onload = copyright();
+
+// Handles Small Screen Menu
+
+// const menuButton = document.querySelector("#menuBtn");
+// menuButton.addEventListener('click',function(event){
+//   const navList = document.querySelector('#navList');
+//   navList.classList.toggle("mobileNav");
+// })
+
+
+document.addEventListener("DOMContentLoaded", function(){
+    buildModDate();
+    });
+
