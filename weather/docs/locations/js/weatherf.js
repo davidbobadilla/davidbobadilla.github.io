@@ -1,3 +1,5 @@
+//This was moved to functions.js//
+
 function current() {
     var todaysDate = new Date();
     const longDayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
