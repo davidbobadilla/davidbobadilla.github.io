@@ -2,8 +2,10 @@
 
 // Listen for the DOM to finish building
 document.addEventListener("DOMContentLoaded", function(){
-
-})
+    buildModDate();
+    const menuButton = document.querySelector("#menuBtn");
+    menuButton.addEventListener('click', mobileMenu);
+  })
 
 // Weather Site JavaScript Functions
 
@@ -19,7 +21,7 @@ function current() {
     var monthName = longMonthNames[todaysDate.getMonth()];
     document.getElementById("current").innerHTML = dayName + ", " + todaysDate.getDate() + " " + monthName + " " + todaysDate.getFullYear();
 }
-
+//Does the data for our page
 function copyright() {
     var todaysDate = new Date();
     var current = todaysDate.getFullYear();
