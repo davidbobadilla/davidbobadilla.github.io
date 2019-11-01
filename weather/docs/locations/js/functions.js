@@ -44,7 +44,7 @@ window.onload = copyright();
 
 //Calculate windchill
 function buildWC(speed, temp) {
-let feels = document.getElementById('feels');
+let feels = document.getElementById('wind');
 
 // Compute the windchill
 let wc = 35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16);
