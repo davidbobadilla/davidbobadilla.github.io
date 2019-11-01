@@ -55,5 +55,7 @@ wc = Math.floor(wc);
 
 // If chill is greater than temp, return the temp
 wc = (wc > temp)?temp:wc;
+console.log(`Feels like: ${wc}`); // log wc to console
+  feels.innerHTML = wc; // output wc to page
 
 }
