@@ -125,6 +125,7 @@ a:hover {
   letter-spacing: .3px;
   font-size: 26px;
   min-width: 50px;
+  background-color: transparent;
   }
 
 .mid {
@@ -141,15 +142,16 @@ background-color: blue;
 position: relative; top:-47px; left: 70px;
 }
 
-  /* .pcomp1{
+  .pcomp1{
     max-width: auto;
+    background-color: transparent;
   }
   .pcomp2{
     max-width: auto;
   }
   .pcomp3{
     max-width: auto;
-  } */
+  }
  
  .o1 {position: absolute; top: -20px; left: 10px;}
  .o2 {position: absolute; top: 15px; left: 168px;}
