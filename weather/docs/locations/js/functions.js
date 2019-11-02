@@ -14,8 +14,9 @@ buildWC(speed, temp); // calculates and displays feels like temperature
 // Values for Ball
 let hour = "10";
 timeIndicator(hour);
+
 //weather background photo
-let weather = "clear";
+let weather = "snow";
 console.log(weather);
 // Change backgorund image
 changeSummaryImage(weather);
