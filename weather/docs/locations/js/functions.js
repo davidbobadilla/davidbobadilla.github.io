@@ -14,6 +14,11 @@ buildWC(speed, temp); // calculates and displays feels like temperature
 // Values for Ball
 let hour = "10";
 timeIndicator(hour);
+//weather background photo
+let weather = "clear";
+console.log(weather);
+// Change backgorund image
+changeSummaryImage(weather);
 
   })
 
@@ -78,3 +83,32 @@ function timeIndicator(hour){
     }
   }
 
+
+  // Change background image
+function changeSummaryImage(weather){
+    // gets the backimage Id
+    let x = document.getElementById('backimage'); 
+    // This will changes all entered in lowercase
+     weather = weather.toLowerCase();
+
+     // adds the class name to change the backgorund image
+    console.log(weather);
+     switch(weather){
+         case "clear":
+            x.className += 'clear';
+         break;
+         case "rain":
+            x.className += 'rain';
+         break;
+         case"fog":
+            x.className += 'fog';
+         break;
+         case"snow":
+            x.className += 'snow';
+         break;
+         case"clouds":
+         x.className += 'clouds';
+         break;
+     }       
+    
+}
