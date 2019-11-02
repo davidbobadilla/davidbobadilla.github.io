@@ -148,9 +148,11 @@ position: relative; top:-47px; left: 70px;
   }
   .pcomp2{
     max-width: auto;
+    background-color: transparent;
   }
   .pcomp3{
     max-width: auto;
+    background-color: transparent;
   }
  
  .o1 {position: absolute; top: -20px; left: 10px;}
