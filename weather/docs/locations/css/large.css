@@ -214,7 +214,15 @@ position: relative; top:-47px; left: 70px;
   grid-row: 3/4;
 }
 
+/* css for the background */
 
+#compContainer{
+  background-size: cover;
+}
+/* Background pictures for summary */
+.clear {
+  background-image: url("/weather/images/clear_small.jpg");
+ }
 
 
 
