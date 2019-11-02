@@ -55,7 +55,7 @@ a:hover {
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: .4em;
     column-gap: .4em;
-    background-color:#3F5077;
+    background-color:transparent;
     
   }
   /* main section {
@@ -75,7 +75,7 @@ a:hover {
 
   .current-condition {
     grid-column: span 3;
-    background-color:rgb(24, 119, 182);
+    background-color:transparent;
     color:white;
     font-size: 26px;
   }
