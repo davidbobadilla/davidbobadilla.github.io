@@ -12,8 +12,9 @@ let speed = 5;
 buildWC(speed, temp); // calculates and displays feels like temperature
 
 // Values for Ball
-let hour = "6";
-timeBall(hour);
+let hour = "10";
+timeIndicator(hour);
+
   })
 
 // Weather Site JavaScript Functions
@@ -63,15 +64,15 @@ function buildWC(speed, temp){
 
 
   // Time ball indicator
-function timeBall(hour){
+function timeIndicator(hour){
     // find all elements with ball class and remove
     let x = document.querySelectorAll(".ball"); 
-    for (let item of x){
+    for (let item of x) {
       console.log(item);
       item.classList.remove("ball");
     }
     //find all hours that match paramerter and add ball class to them
-    let hr = document.querySelectorAll(".inner" + hour);
+    let hr = document.querySelectorAll(".i" + hour);
     for (let item of hr){
       item.classList.add("ball");
     }
