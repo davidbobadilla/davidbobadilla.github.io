@@ -75,7 +75,7 @@ a:hover {
 
   .current-condition {
     grid-column: span 3;
-    /* background-color:rgb(24, 119, 182); */
+    background-color:rgb(24, 119, 182);
     color:white;
     font-size: 26px;
   }
