@@ -10,6 +10,10 @@ document.addEventListener("DOMContentLoaded", function(){
 let temp = 31;
 let speed = 5;
 buildWC(speed, temp); // calculates and displays feels like temperature
+
+// Values for Ball
+let hour = "6";
+timeBall(hour);
   })
 
 // Weather Site JavaScript Functions
@@ -57,4 +61,19 @@ function buildWC(speed, temp){
     feelTemp.innerHTML = wc; // output wc 
   }
 
+
+  // Time ball indicator
+function timeBall(hour){
+    // find all elements with ball class and remove
+    let x = document.querySelectorAll(".ball"); 
+    for (let item of x){
+      console.log(item);
+      item.classList.remove("ball");
+    }
+    //find all hours that match paramerter and add ball class to them
+    let hr = document.querySelectorAll(".inner" + hour);
+    for (let item of hr){
+      item.classList.add("ball");
+    }
+  }
 
