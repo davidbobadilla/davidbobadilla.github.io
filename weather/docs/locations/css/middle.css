@@ -47,6 +47,7 @@ a:hover {
   main {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background-color:transparent;
   }
   main section {
     background-color: white;
@@ -66,7 +67,7 @@ a:hover {
 
   .current-condition {
     grid-column: span 2;
-    background-color:#3F774D;
+    background-color:transparent;
     color: white;
   }
   .forecast {
@@ -109,6 +110,7 @@ a:hover {
 }
 .precip1 {
   position: relative;
+  background-color: transparent;
   letter-spacing: .3px;
   font-size: 26px;
   min-width: 50px;
@@ -128,15 +130,18 @@ background-color: blue;
 position: relative; top:-47px; left: 70px
 }
 
-  /* .pcomp1{
-    max-width: auto;
-  }
-  .pcomp2{
-    max-width: auto;
-  }
-  .pcomp3{
-    max-width: auto;
-  } */
+.pcomp1{
+  max-width: auto;
+  background-color: transparent;
+}
+.pcomp2{
+  max-width: auto;
+  background-color: transparent;
+}
+.pcomp3{
+  max-width: auto;
+  background-color: transparent;
+}
  
  .o1 {position: absolute; top: -20px; left: 10px;}
  .o2 {position: absolute; top: 15px; left: 168px;}
