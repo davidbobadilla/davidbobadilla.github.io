@@ -2,9 +2,9 @@
 
 // Listen for the DOM to finish building
 document.addEventListener("DOMContentLoaded", function(){
-    buildModDate();
-    const menuButton = document.querySelector("#menuBtn");
-    menuButton.addEventListener('click', mobileMenu);
+    // buildModDate();
+    // const menuButton = document.querySelector("#menuBtn");
+    // menuButton.addEventListener('click', mobileMenu);
 
     // Values for buildWindChill()
 let temp = 31;
