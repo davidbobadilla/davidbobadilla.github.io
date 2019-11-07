@@ -7,6 +7,12 @@ document.addEventListener("DOMContentLoaded", function(){
     // menuButton.addEventListener('click', mobileMenu);
 
     // Values for buildWindChill()
+
+//Get weather json data
+let weatherURL = "/weather/js/idahoweather.json";
+fetchWeatherData(weatherURL);
+
+
 let temp = 31;
 let speed = 5;
 buildWC(speed, temp); // calculates and displays feels like temperature
@@ -27,9 +33,7 @@ var pageNav = document.querySelector('#page-nav');
 var statusContainer = document.querySelector('#status');
 var contentContainer = document.querySelector('#backimage');
 
-//Get weather json data
-let weatherURL = "/weather/docs/locations/js/idahoweather.json";
-fetchWeatherData(weatherURL);
+
 
   })
 
@@ -129,7 +133,7 @@ function changeSummaryImage(weather){
 ************************************* */
 function fetchWeatherData(weatherURL){
   let cityName = 'Preston'; // The data we want from the weather.json file
-  fetch(weatherURL)
+  fetch("/weather/js/idahoweather.json")
   .then(function(response) {
   if(response.ok){
   return response.json();
