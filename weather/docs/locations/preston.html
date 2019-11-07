@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Allaboutweather.com</title>
+    <title id="page-title">| Allaboutweather.com</title>
     <meta name="author" content="David Bobadilla">
     <link rel="stylesheet" href="/weather/docs/locations/css/mobile.css" media="screen and (max-width: 579px)">
     <link rel="stylesheet" href="/weather/docs/locations/css/middle.css" media="screen and (min-width: 580px)"> 
@@ -24,7 +24,7 @@
                 </div>
             </div>
         </header>
-        <nav>
+        <nav id="page-nav">
             <ul class="navegacion">
                 <li><a href="/index.html" title="Go to the homepage">Home</a></li>
                 <li><a href="#" class="activenav" title="Go to the Preston page">Preston</a></li>
@@ -35,8 +35,10 @@
             </ul>
         </nav>
         
+<section id="status">Please be patient while I get your weather information.</section>
 
-    <main id="backimage">
+    <main id="backimage" class="hide">
+        <!-- The hide makes the temp, wind, and other value hide and not display the background -->
 
          <section class="location">
              <h2>Location</h2>

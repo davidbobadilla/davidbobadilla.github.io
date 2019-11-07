@@ -234,8 +234,10 @@ position: relative; top:-47px; left: 70px;
 .clouds{
   background-image: url("/Images/weather600w/clouds-600w.jpg");
 }
-
-
+/* To hide html */
+.hide{
+  display: none;
+}
 
 
 }

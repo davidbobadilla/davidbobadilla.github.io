@@ -21,6 +21,12 @@ console.log(weather);
 // Change backgorund image
 changeSummaryImage(weather);
 
+
+//The variables to start with fetch Activity.
+var pageNav = document.querySelector('#page-nav');
+var statusContainer = document.querySelector('#status');
+var contentContainer = document.querySelector('#backimage');
+
   })
 
 // Weather Site JavaScript Functions
@@ -112,4 +118,54 @@ function changeSummaryImage(weather){
          break;
      }       
     
+
+
+/* *************************************
+*  Fetch Weather Data
+************************************* */
+function fetchWeatherData(weatherURL){
+  let cityName = 'Preston'; // The data we want from the weather.json file
+  fetch(weatherURL)
+  .then(function(response) {
+  if(response.ok){
+  return response.json();
+  }
+  throw new ERROR('Network response was not OK.');
+  })
+  .then(function(data){
+    // Check the data object that was retrieved
+    console.log(data);
+    // data is the full JavaScript object, but we only want the preston part
+    // shorten the variable and focus only on the data we want to reduce typing
+    let p = data[cityName];
+
+    // **********  Get the location information  **********
+    let locName = p.City;
+    let locState = p.State;
+    // Put them together
+    let fullName = locName+', '+locState;
+    // See if it worked, using ticks around the content in the log
+    console.log(`fullName is: ${fullName}`);
+    // Get the longitude and latitude and combine them to
+    // a comma separated single string
+
+    // Create a JSON object containing the full name, latitude and longitude
+    // and store it into local storage.
+
+    // **********  Get the current conditions information  **********
+    // As the data is extracted from the JSON, store it into session storage
+    // Get the temperature data
+
+
+    // Get the wind data 
+
+
+    // Get the hourly data using another function - should include the forecast temp, condition icons and wind speeds. The data will be stored into session storage.
+
+  })
+  .catch(function(error){
+  console.log('There was a fetch problem: ', error.message);
+  statusContainer.innerHTML = 'Sorry, the data could not be processed.';
+  })
+}
 }
