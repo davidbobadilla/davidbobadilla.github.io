@@ -100,7 +100,7 @@ function timeIndicator(hour){
 
 
   // Change background image
-function changeSummaryImage(weather){
+ function changeSummaryImage(weather){
     // gets the backimage Id
     let x = document.getElementById('backimage'); 
     // This will changes all entered in lowercase
@@ -125,8 +125,6 @@ function changeSummaryImage(weather){
          x.className += 'clouds';
          break;
      }       
-    
-
 
 /* *************************************
 *  Fetch Weather Data
@@ -178,4 +176,13 @@ function fetchWeatherData(weatherURL){
   statusContainer.innerHTML = 'Sorry, the data could not be processed.';
   })
 }
+    
+
+
+
+
+
+
+
+
 }
