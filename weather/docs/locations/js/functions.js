@@ -1,4 +1,8 @@
 'use strict';
+//The variables to start with fetch Activity.
+var pageNav = document.querySelector('#page-nav');
+var statusContainer = document.querySelector('#status');
+var contentContainer = document.querySelector('#backimage');
 
 // Listen for the DOM to finish building
 document.addEventListener("DOMContentLoaded", function(){
@@ -7,10 +11,6 @@ document.addEventListener("DOMContentLoaded", function(){
     // menuButton.addEventListener('click', mobileMenu);
 
     // Values for buildWindChill()
-
-//Get weather json data
-let weatherURL = "/weather/js/idahoweather.json";
-fetchWeatherData(weatherURL);
 
 
 let temp = 31;
@@ -28,11 +28,11 @@ console.log(weather);
 changeSummaryImage(weather);
 
 
-//The variables to start with fetch Activity.
-var pageNav = document.querySelector('#page-nav');
-var statusContainer = document.querySelector('#status');
-var contentContainer = document.querySelector('#backimage');
 
+
+//Get weather json data
+let weatherURL = "/weather/docs/locations/js/idahoweather.json";
+fetchWeatherData(weatherURL);
 
 
   })
