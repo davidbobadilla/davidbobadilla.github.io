@@ -27,6 +27,10 @@ var pageNav = document.querySelector('#page-nav');
 var statusContainer = document.querySelector('#status');
 var contentContainer = document.querySelector('#backimage');
 
+//Get weather json data
+let weatherURL = "/weather/docs/locations/js/idahoweather.json";
+fetchWeatherData(weatherURL);
+
   })
 
 // Weather Site JavaScript Functions
@@ -148,10 +152,12 @@ function fetchWeatherData(weatherURL){
     console.log(`fullName is: ${fullName}`);
     // Get the longitude and latitude and combine them to
     // a comma separated single string
-
+    const latLong = p.properties.relativeLocation.geometry.coordinates[1] + ","+ p.properties.relativeLocation.geometry.coordinates[0];
+    console.log(latLong);
     // Create a JSON object containing the full name, latitude and longitude
     // and store it into local storage.
-
+    const prestonData = JSON.stringify({fullName,latLong});
+    locStore.setItem("Preston,ID", prestonData);
     // **********  Get the current conditions information  **********
     // As the data is extracted from the JSON, store it into session storage
     // Get the temperature data
