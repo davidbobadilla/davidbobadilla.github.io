@@ -133,7 +133,7 @@ function changeSummaryImage(weather){
 ************************************* */
 function fetchWeatherData(weatherURL){
   let cityName = 'Preston'; // The data we want from the weather.json file
-  fetch("/weather/js/idahoweather.json")
+  fetch(weatherURL)
   .then(function(response) {
   if(response.ok){
   return response.json();
