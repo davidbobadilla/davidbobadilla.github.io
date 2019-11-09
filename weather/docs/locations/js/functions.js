@@ -40,8 +40,10 @@ function fetchWeatherData(weatherURL){
     locStore.setItem("Preston,ID", prestonData);
     // **********  Get the current conditions information  **********
     // As the data is extracted from the JSON, store it into session storage
+    sessStore.setItem("fullName",fullName);
+    sessStore.setItem("latLong",latLong);
     // Get the temperature data
-
+    
 
     // Get the wind data 
 
@@ -54,6 +56,7 @@ function fetchWeatherData(weatherURL){
   statusContainer.innerHTML = 'Sorry, the data could not be processed.';
   })
 }
+
 // Listen for the DOM to finish building
 document.addEventListener("DOMContentLoaded", function(){
     // buildModDate();
