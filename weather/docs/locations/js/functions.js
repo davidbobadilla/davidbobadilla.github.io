@@ -85,6 +85,10 @@ let weatherURL = "/weather/docs/locations/js/idahoweather.json";
 fetchWeatherData(weatherURL);
 
 
+// Setup localStorage
+var locStore = window.localStorage;
+
+
   })
 
 // Weather Site JavaScript Functions
