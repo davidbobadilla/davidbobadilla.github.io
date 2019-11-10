@@ -91,8 +91,7 @@ fetchWeatherData(weatherURL);
 // Setup sessionStorage
 var sessStore = window.sessionStorage;
 
-// Setup localStorage
-var locStore = window.localStorage;
+
 
 
   })
