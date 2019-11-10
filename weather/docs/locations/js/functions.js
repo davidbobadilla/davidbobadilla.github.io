@@ -43,19 +43,80 @@ function fetchWeatherData(weatherURL){
     sessStore.setItem("fullName",fullName);
     sessStore.setItem("latLong",latLong);
     // Get the temperature data
-    
+    let t = data[temperature];
+    console.log(`Temperature is: ${t}`);
 
     // Get the wind data 
+    let w = data[windSpeed];
+    console.log(`The Windspeed is: ${w}`)
 
 
     // Get the hourly data using another function - should include the forecast temp, condition icons and wind speeds. The data will be stored into session storage.
-
+    getHourly(p.properties.forecastHourly);
   })
   .catch(function(error){
   console.log('There was a fetch problem: ', error.message);
   statusContainer.innerHTML = 'Sorry, the data could not be processed.';
   })
 }
+
+
+
+
+/* *************************************
+*  Get Hourly Forecast data
+************************************* */
+function getHourly(URL) {
+  fetch(URL)
+   .then(function (response) {
+    if (response.ok) {
+     return response.json();
+    }
+    throw new ERROR('Response not OK.');
+   })
+   .then(function (data) {
+    console.log('Data from getHourly function:');
+    console.log(data); // Let's see what we got back
+ 
+    // Store 12 hours of data to session storage  
+    var hourData = [];
+    let todayDate = new Date();
+    var nowHour = todayDate.getHours();
+    console.log(`nowHour is ${nowHour}`);
+    for (let i = 0, x = 11; i <= x; i++) {
+     if (nowHour < 24) {
+      hourData[nowHour] = data.properties.periods[i].temperature + "," + data.properties.periods[i].windSpeed + "," + data.properties.periods[i].icon;
+      sessStore.setItem(`hour${nowHour}`, hourData[nowHour]);
+      nowHour++;
+     } else {
+      nowHour = nowHour - 12;
+      hourData[nowHour] = data.properties.periods[i].temperature + "," + data.properties.periods[i].windSpeed + "," + data.properties.periods[i].icon;
+      sessStore.setItem(`hour${nowHour}`, hourData[nowHour]);
+      nowHour = 1;
+     }
+    }
+ 
+    // Get the shortForecast value from the first hour (the current hour)
+    // This will be the condition keyword for setting the background image
+    sessStore.setItem('shortForecast', data.properties.periods[0].shortForecast);
+ 
+    // Call the buildPage function
+    buildPage();
+   })
+   .catch(error => console.log('There was a getHourly error: ', error))
+ }
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Listen for the DOM to finish building
 document.addEventListener("DOMContentLoaded", function(){
@@ -91,6 +152,8 @@ fetchWeatherData(weatherURL);
 // Setup sessionStorage
 var sessStore = window.sessionStorage;
 
+// Setup localStorage
+var locStore = window.localStorage;
 
 
 
