@@ -198,6 +198,11 @@ position: relative; top:-47px; left: 70px
   grid-column: 3/5;
   grid-row: 3/4;
 }
+.gusts {
+  grid-column: 5/7;
+  grid-row: 2/3;
+  margin-top: auto;
+}
 
 /* css for the background */
 
