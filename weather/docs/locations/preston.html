@@ -37,7 +37,7 @@
         
 <section id="status">Please be patient while I get your weather information.</section>
 
-    <main id="backimage" class="hide">
+    <main id="backimage" >class="hide"
         <!-- The hide makes the temp, wind, and other value hide and not display the background -->
 
          <section class="location">
@@ -54,7 +54,8 @@
             <li class="feels">Feels like: <span id="chill">23</span>°</li>
             <li class="l-temp">18°</li>
             <li class="h-temp">58°</li>
-            <li class="wind">12mph</li>
+            <li class="wind"><span class="wi wi-strong-wind"::before></span>" 12mph"</li>
+            <li id="gusts">Gusts: 20mph</li>
          </ul>
          </section>
 
