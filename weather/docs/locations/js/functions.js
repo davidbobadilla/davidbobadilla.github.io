@@ -111,6 +111,30 @@ function getHourly(URL) {
 
 
 
+ function buildPage() {
+  // Set the title with the location name at the first
+  // Gets the title element so it can be worked with
+  let pageTitle = document.querySelector('#page-title');
+  // Create a text node containing the full name 
+  let fullNameNode = document.createTextNode(sessStore.getItem('fullName'));
+  // inserts the fullName value before any other content that might exist
+  pageTitle.insertBefore(fullNameNode, pageTitle.childNodes[0]);
+  // When this is done the title should look something like this:
+  // Preston, Idaho | The Weather Site                    
+                     
+ }
+
+  // Get the h1 to display the city location
+  let contentHeading = document.querySelector('#contentHeading');
+  contentHeading.innerHTML = sessStore.getItem('fullName');
+  // The h1 in the main element should now say "Preston, Idaho"
+
+
+  // Get the coordinates container for the location
+  let latlon = document.querySelector('#latLon');
+  latLon.innerHTML = sessStore.getItem('latLong');
+  // The latitude and longitude should match what was stored in session storage.
+
 
 
 
@@ -158,6 +182,7 @@ var locStore = window.localStorage;
 
 
   })
+
 
 // Weather Site JavaScript Functions
 
@@ -249,13 +274,6 @@ function timeIndicator(hour){
      }       
 
 
+  
     
-
-
-
-
-
-
-
-
 }
