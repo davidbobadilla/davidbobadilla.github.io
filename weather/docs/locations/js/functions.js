@@ -3,6 +3,12 @@
 var pageNav = document.querySelector('#page-nav');
 var statusContainer = document.querySelector('#status');
 var contentContainer = document.querySelector('#backimage');
+// Setup sessionStorage
+var sessStore = window.sessionStorage;
+
+// Setup localStorage
+var locStore = window.localStorage;
+
 
 /* *************************************
 *  Fetch Weather Data
@@ -24,8 +30,9 @@ function fetchWeatherData(weatherURL){
     let p = data[cityName];
 
     // **********  Get the location information  **********
-    let locName = p.City;
-    let locState = p.State;
+    let locName = p.properties.relativeLocation.properties.city;
+    console.log(locName);
+    let locState = p.properties.relativeLocation.properties.state;
     // Put them together
     let fullName = locName+', '+locState;
     // See if it worked, using ticks around the content in the log
@@ -122,16 +129,16 @@ function getHourly(URL) {
                      
  }
 
-  // Get the h1 to display the city location
-  let contentHeading = document.querySelector('#contentHeading');
-  contentHeading.innerHTML = sessStore.getItem('fullName');
-  // The h1 in the main element should now say "Preston, Idaho"
+  // // Get the h1 to display the city location
+  // let contentHeading = document.querySelector('.location');
+  // contentHeading.innerHTML = sessStore.getItem('fullName');
+  // // The h1 in the main element should now say "Preston, Idaho"
 
 
-  // Get the coordinates container for the location
-  let latlon = document.querySelector('#latLon');
-  latLon.innerHTML = sessStore.getItem('latLong');
-  // The latitude and longitude should match what was stored in session storage.
+  // // Get the coordinates container for the location
+  // let latlon = document.querySelector('#latLon');
+  // latLon.innerHTML = sessStore.getItem('latLong');
+  // // The latitude and longitude should match what was stored in session storage.
 
 
 
@@ -170,11 +177,6 @@ let weatherURL = "/weather/docs/locations/js/idahoweather.json";
 fetchWeatherData(weatherURL);
 
 
-// Setup sessionStorage
-var sessStore = window.sessionStorage;
-
-// Setup localStorage
-var locStore = window.localStorage;
 
 
 
