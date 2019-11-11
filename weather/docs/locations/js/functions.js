@@ -109,8 +109,6 @@ function getHourly(URL) {
 
 
 
-
-
  function buildPage() {
   // Set the title with the location name at the first
   // Gets the title element so it can be worked with
@@ -134,7 +132,6 @@ function getHourly(URL) {
   let latlon = document.querySelector('#latLon');
   latLon.innerHTML = sessStore.getItem('latLong');
   // The latitude and longitude should match what was stored in session storage.
-
 
 
 
@@ -274,6 +271,11 @@ function timeIndicator(hour){
      }       
 
 
-  
+
+
+
+
+
+
     
 }
