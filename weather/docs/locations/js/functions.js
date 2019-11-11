@@ -50,13 +50,24 @@ function fetchWeatherData(weatherURL){
     sessStore.setItem("fullName",fullName);
     sessStore.setItem("latLong",latLong);
     // Get the temperature data
-    let t = data[temperature];
-    console.log(`Temperature is: ${t}`);
+    const tempera = p.properties.relativeLocation.properties.temperature;
+    console.log(`Temperature is: ${tempera}`);
 
     // Get the wind data 
-    let w = data[windSpeed];
-    console.log(`The Windspeed is: ${w}`)
+    const win = p.properties.relativeLocation.properties.windSpeed;
+    console.log(`The Windspeed is: ${win}`);
 
+    // Get wind Gust data
+    const gustd = p.properties.relativeLocation.properties.windGust;
+    console.log(`The Wind Gust is: ${gustd}`);
+
+    //Get high temperature
+    const htemp = p.properties.relativeLocation.properties.highTemp;
+    console.log(`The high temperature is: ${htemp}`);
+
+    //Get low temperature
+    const ltemp = p.properties.relativeLocation.properties.lowTemp;
+    console.log(`The low temperature is: ${ltemp}`);
 
     // Get the hourly data using another function - should include the forecast temp, condition icons and wind speeds. The data will be stored into session storage.
     getHourly(p.properties.forecastHourly);
