@@ -150,8 +150,8 @@ function getHourly(URL) {
 
 
   // Get the coordinates container for the location
-  let latlon = document.querySelector('#latLon');
-  latLon.innerHTML = sessStore.getItem('latLong');
+  let latlon = document.querySelector('#coords');
+  latLon.innerHTML = sessStore.getItem('coords');
   // The latitude and longitude should match what was stored in session storage.
 
   // Get the condition keyword and set Background picture
