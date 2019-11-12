@@ -140,16 +140,16 @@ function getHourly(URL) {
                      
  }
 
-  // // Get the h1 to display the city location
-  // let contentHeading = document.querySelector('.location');
-  // contentHeading.innerHTML = sessStore.getItem('fullName');
-  // // The h1 in the main element should now say "Preston, Idaho"
+  // Get the h1 to display the city location
+  let contentHeading = document.querySelector('.location');
+  contentHeading.innerHTML = sessStore.getItem('fullName');
+  // The h1 in the main element should now say "Preston, Idaho"
 
 
-  // // Get the coordinates container for the location
-  // let latlon = document.querySelector('#latLon');
-  // latLon.innerHTML = sessStore.getItem('latLong');
-  // // The latitude and longitude should match what was stored in session storage.
+  // Get the coordinates container for the location
+  let latlon = document.querySelector('#latLon');
+  latLon.innerHTML = sessStore.getItem('latLong');
+  // The latitude and longitude should match what was stored in session storage.
 
 
 
