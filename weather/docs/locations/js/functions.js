@@ -150,7 +150,7 @@ function getHourly(URL) {
 
 
   // Get the coordinates container for the location
-  let latLong = $("#coords");
+  let latLong = $(".coords");
   latLong.innerHTML = sessStore.getItem('coords');
   // The latitude and longitude should match what was stored in session storage.
 
