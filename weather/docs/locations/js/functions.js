@@ -151,8 +151,31 @@ function getHourly(URL) {
   latLon.innerHTML = sessStore.getItem('latLong');
   // The latitude and longitude should match what was stored in session storage.
 
+  // Get the condition keyword and set Background picture
+  changeSummaryImage(sessStore.getItem('shortForecast'));
+  /* Keep in mind that the value may be different than 
+  what you need for your CSS to replace the image. You 
+  may need to make some adaptations for it to work.*/
 
 
+
+
+ // **********  Set the current conditions information  **********
+// Set the temperature information
+let highTemp = $('.h-temp');
+let loTemp = $('.l-temp');
+let currentTemp = $('.c-temp');
+let feelTemp = $('.feels');
+highTemp.innerHTML = sessStore.getItem('highTemp') + "°F";
+loTemp.innerHTML = sessStore.getItem('lowTemp') + "°F";
+currentTemp.innerHTML = sessStore.getItem('temperature') + "°F";
+// Set the wind information
+let speed = $('.wind');
+let gust = $('.gusts');
+speed.innerHTML = sessStore.getItem('windSpeed');
+gust.innerHTML = sessStore.getItem('windGust');
+// Calculate feel like temp
+feelTemp.innerHTML = buildWC(sessStore.getItem('windSpeed'), sessStore.getItem('temperature')) + "°F";
 
 
 
