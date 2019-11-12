@@ -84,7 +84,7 @@ function fetchWeatherData(weatherURL){
 /* *************************************
 *  Get Hourly Forecast data
 ************************************* */
-function getHourly(URL) {
+function getHourly(URL) { 
   fetch(URL)
    .then(function (response) {
     if (response.ok) {
