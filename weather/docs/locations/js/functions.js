@@ -8,6 +8,8 @@ var sessStore = window.sessionStorage;
 
 // Setup localStorage
 var locStore = window.localStorage;
+var $ = document.querySelector.bind(document);
+var $$ = document.querySelectorAll.bind(document);
 
 
 /* *************************************
@@ -241,19 +243,19 @@ document.addEventListener("DOMContentLoaded", function(){
     // Values for buildWindChill()
 
 
-let temp = 31;
-let speed = 5;
-buildWC(speed, temp); // calculates and displays feels like temperature
+// let temp = 31;
+// let speed = 5;
+// buildWC(speed, temp); // calculates and displays feels like temperature
 
-// Values for Ball
-let hour = "10";
-timeIndicator(hour);
+// // Values for Ball
+// let hour = "10";
+// timeIndicator(hour);
 
-//weather background photo
-let weather = "snow";
-console.log(weather);
-// Change backgorund image
-changeSummaryImage(weather);
+// //weather background photo
+// let weather = "snow";
+// console.log(weather);
+// // Change backgorund image
+// changeSummaryImage(weather);
 
 
 
@@ -263,11 +265,11 @@ let weatherURL = "/weather/docs/locations/js/idahoweather.json";
 fetchWeatherData(weatherURL);
 
 
-
-
-
   })
 
+
+
+  
 
 // Weather Site JavaScript Functions
 
