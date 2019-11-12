@@ -180,6 +180,58 @@ feelTemp.innerHTML = buildWC(sessStore.getItem('windSpeed'), sessStore.getItem('
 
 
 
+
+// **********  Set the Time Indicators  **********
+let thisDate = new Date();
+var currentHour = thisDate.getHours();
+let indicatorHour;
+// If hour is greater than 12, subtract 12
+if (currentHour > 12) {
+ indicatorHour = currentHour - 12;
+} else {
+ indicatorHour = currentHour;
+};
+console.log(`Current hour in time indicator is: ${currentHour}`);
+// Set the time indicator
+timeIndicator(indicatorHour);
+
+
+
+
+
+// ********** Hourly Temperature Component  **********
+// Get the hourly data from storage as an array
+let currentData = [];
+let tempHour = currentHour;
+// Adjust counter based on current time
+for (let i = 0, x = 12; i < x; i++) {
+ if (tempHour <= 23) {
+  currentData[i] = sessStore.getItem('hour' + tempHour).split(",");
+  tempHour++;
+ } else {
+  tempHour = tempHour - 12;
+  currentData[i] = sessStore.getItem('hour' + tempHour).split(",");
+  console.log(`CurrentData[i][0] is: ${currentData[i][0]}`);
+  tempHour = 1;
+ }
+}
+console.log(currentData);
+
+// Loop through array inserting data
+// Start with the outer container that matchs the current time
+tempHour = currentHour;
+for (let i = 0, x = 12; i < x; i++) {
+ if (tempHour >= 13) {
+  tempHour = tempHour - 12;
+ }
+ console.log(`Start container is: #temps o.${tempHour}`);
+ $('#temps .o' + tempHour).innerHTML = currentData[i][0];
+ tempHour++;
+}
+
+
+
+
 // Listen for the DOM to finish building
 document.addEventListener("DOMContentLoaded", function(){
     // buildModDate();
