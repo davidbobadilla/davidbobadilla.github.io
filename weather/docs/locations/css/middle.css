@@ -78,6 +78,10 @@ a:hover {
   .wind1{
     grid-column: 2/3;
   }
+  /* Constrain condition images */
+#condition img{
+  max-width: 40%;
+}
   footer{
     background-color: #3F5077;
     padding: 1em 0 1em 0;
