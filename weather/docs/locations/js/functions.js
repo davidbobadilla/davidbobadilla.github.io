@@ -264,6 +264,17 @@ for (let i = 0, x = 12; i < x; i++) {
 }
 
 
+// **********  Condition Component Icons  **********
+let conditionHour = currentHour;
+// Adjust counter based on current time
+for (let i = 0, x = 12; i < x; i++) {
+ if (conditionHour >= 13) {
+  conditionHour = conditionHour - 12;
+ }
+ $('#condition .o' + conditionHour).innerHTML = '<img src="' + currentData[i][2] + '" alt="hourly weather condition image">';
+ conditionHour++;
+}
+
 
 // Listen for the DOM to finish building
 document.addEventListener("DOMContentLoaded", function(){
@@ -394,7 +405,9 @@ function timeIndicator(hour){
 
 
 
-
+// Change the status of the containers
+contentContainer.setAttribute('class', ''); // removes the hide class from main
+statusContainer.setAttribute('class', 'hide'); // hides the status container
 
 
 
