@@ -293,10 +293,10 @@ document.addEventListener("DOMContentLoaded", function(){
 // let hour = "10";
 // timeIndicator(hour);
 
-// //weather background photo
+//weather background photo
 // let weather = "snow";
 // console.log(weather);
-// // Change backgorund image
+// Change backgorund image
 // changeSummaryImage(weather);
 
 
