@@ -234,6 +234,36 @@ for (let i = 0, x = 12; i < x; i++) {
 
 
 
+// ********** Hourly Wind Component  **********
+// Get the hourly data from storage
+let windArray = [];
+let windHour = currentHour;
+// Adjust counter based on current time
+for (let i = 0, x = 12; i < x; i++) {
+ if (windHour <= 23) {
+  windArray[i] = currentData[i][1].split(" ");
+  console.log(`windArray[i] is: ${windArray[i]}`);
+  windHour++;
+ } else {
+  windHour = windHour - 12;
+  windArray[i] = currentData[i][1].split(" ");
+  windHour = 1;
+ }
+}
+console.log(windArray);
+
+// Insert Wind data
+// Start with the outer container that matchs the time indicator
+windHour = currentHour;
+for (let i = 0, x = 12; i < x; i++) {
+ if (windHour >= 13) {
+  windHour = windHour - 12;
+ }
+ $('#winds .o' + windHour).innerHTML = windArray[i][0];
+ windHour++;
+}
+
+
 
 // Listen for the DOM to finish building
 document.addEventListener("DOMContentLoaded", function(){
