@@ -12,6 +12,41 @@ var $ = document.querySelector.bind(document);
 var $$ = document.querySelectorAll.bind(document);
 
 
+// Listen for the DOM to finish building
+document.addEventListener("DOMContentLoaded", function(){
+  // buildModDate();
+  // const menuButton = document.querySelector("#menuBtn");
+  // menuButton.addEventListener('click', mobileMenu);
+
+  // Values for buildWindChill()
+
+
+// let temp = 31;
+// let speed = 5;
+// buildWC(speed, temp); // calculates and displays feels like temperature
+
+// // Values for Ball
+// let hour = "10";
+// timeIndicator(hour);
+
+//weather background photo
+// let weather = "snow";
+// console.log(weather);
+// Change backgorund image
+// changeSummaryImage(weather);
+
+
+
+
+//Get weather json data
+let weatherURL = "/weather/docs/locations/js/idahoweather.json";
+fetchWeatherData(weatherURL);
+
+
+})
+
+
+
 /* *************************************
 *  Fetch Weather Data
 ************************************* */
@@ -222,15 +257,15 @@ console.log(currentData);
 
 // Loop through array inserting data
 // Start with the outer container that matchs the current time
-tempHour = currentHour;
-for (let i = 0, x = 12; i < x; i++) {
- if (tempHour >= 13) {
-  tempHour = tempHour - 12;
- }
- console.log(`Start container is: #temps o.${tempHour}`);
- $('#temps .o' + tempHour).innerHTML = currentData[i][0];
- tempHour++;
-}
+// tempHour = currentHour;
+// for (let i = 0, x = 12; i < x; i++) {
+//  if (tempHour >= 13) {
+//   tempHour = tempHour - 12;
+//  }
+//  console.log(`Start container is: #temps o.${tempHour}`);
+//  $('.temperature .o' + tempHour).innerHTML = currentData[i][0];
+//  tempHour++;
+// }
 
 
 
@@ -259,7 +294,7 @@ for (let i = 0, x = 12; i < x; i++) {
  if (windHour >= 13) {
   windHour = windHour - 12;
  }
- $('#winds .o' + windHour).innerHTML = windArray[i][0];
+ $('.wind1 .o' + windHour).innerHTML = windArray[i][0];
  windHour++;
 }
 
@@ -271,43 +306,12 @@ for (let i = 0, x = 12; i < x; i++) {
  if (conditionHour >= 13) {
   conditionHour = conditionHour - 12;
  }
- $('#condition .o' + conditionHour).innerHTML = '<img src="' + currentData[i][2] + '" alt="hourly weather condition image">';
+ $('.forecast .o' + conditionHour).innerHTML = '<img src="' + currentData[i][2] + '" alt="hourly weather condition image">';
  conditionHour++;
 }
 
 
-// Listen for the DOM to finish building
-document.addEventListener("DOMContentLoaded", function(){
-    // buildModDate();
-    // const menuButton = document.querySelector("#menuBtn");
-    // menuButton.addEventListener('click', mobileMenu);
 
-    // Values for buildWindChill()
-
-
-// let temp = 31;
-// let speed = 5;
-// buildWC(speed, temp); // calculates and displays feels like temperature
-
-// // Values for Ball
-// let hour = "10";
-// timeIndicator(hour);
-
-//weather background photo
-// let weather = "snow";
-// console.log(weather);
-// Change backgorund image
-// changeSummaryImage(weather);
-
-
-
-
-//Get weather json data
-let weatherURL = "/weather/docs/locations/js/idahoweather.json";
-fetchWeatherData(weatherURL);
-
-
-  })
 
 
 
@@ -377,6 +381,7 @@ function timeIndicator(hour){
 
   // Change background image
  function changeSummaryImage(weather){
+   console.log(`weather is: ${weather}`);
     // gets the backimage Id
     let x = document.getElementById('backimage'); 
     // This will changes all entered in lowercase
