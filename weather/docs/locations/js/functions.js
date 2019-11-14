@@ -192,23 +192,28 @@ function fetchWeatherData(weatherURL){
     sessStore.setItem("latLong",latLong);
     // Get the temperature data
     const tempera = p.properties.relativeLocation.properties.temperature;
+    sessStore.setItem("temperature",tempera);
     console.log(`Temperature is: ${tempera}`);
 
     // Get the wind data 
-    const win = p.properties.relativeLocation.properties.windSpeed;
-    console.log(`The Windspeed is: ${win}`);
+    const windSpeed = p.properties.relativeLocation.properties.windSpeed;
+    sessStore.setItem("WindSpeed",windSpeed);
+    console.log(`The Windspeed is: ${windSpeed}`);
 
     // Get wind Gust data
-    const gustd = p.properties.relativeLocation.properties.windGust;
-    console.log(`The Wind Gust is: ${gustd}`);
+    const windGust = p.properties.relativeLocation.properties.windGust;
+    sessStore.setItem("WindGust", windGust);
+    console.log(`The Wind Gust is: ${windGust}`);
 
     //Get high temperature
-    const htemp = p.properties.relativeLocation.properties.highTemp;
-    console.log(`The high temperature is: ${htemp}`);
+    const highTemp = p.properties.relativeLocation.properties.highTemp;
+    sessStore.setItem("highTemp",highTemp);
+    console.log(`The high temperature is: ${highTemp}`);
 
     //Get low temperature
-    const ltemp = p.properties.relativeLocation.properties.lowTemp;
-    console.log(`The low temperature is: ${ltemp}`);
+    const lowTemp = p.properties.relativeLocation.properties.lowTemp;
+    sessStore.setItem("lowTemp",lowTemp);
+    console.log(`The low temperature is: ${lowTemp}`);
 
     // Get the hourly data using another function - should include the forecast temp, condition icons and wind speeds. The data will be stored into session storage.
     getHourly(p.properties.forecastHourly);
@@ -307,7 +312,7 @@ function getHourly(URL) {
 let highTemp = $('.h-temp');
 let loTemp = $('.l-temp');
 let currentTemp = $('.c-temp');
-let feelTemp = $('.feels');
+let feelTemp = $('.chill');
 highTemp.innerHTML = sessStore.getItem('highTemp') + "°F";
 loTemp.innerHTML = sessStore.getItem('lowTemp') + "°F";
 currentTemp.innerHTML = sessStore.getItem('temperature') + "°F";
