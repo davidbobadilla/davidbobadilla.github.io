@@ -77,7 +77,7 @@ function fetchWeatherData(weatherURL){
     // Get the longitude and latitude and combine them to
     // a comma separated single string
     const latLong = p.properties.relativeLocation.geometry.coordinates[1] + ","+ p.properties.relativeLocation.geometry.coordinates[0];
-    console.log(latLong);
+    console.log(`The coordinates are: ${latLong}`);
     // Create a JSON object containing the full name, latitude and longitude
     // and store it into local storage.
     const prestonData = JSON.stringify({fullName,latLong});
@@ -186,7 +186,7 @@ function getHourly(URL) {
 
   // Get the coordinates container for the location
   let latLong = $(".coords");
-  latLong.innerHTML = sessStore.getItem('coords');;
+  latLong.innerHTML = sessStore.getItem('latLong');
   // The latitude and longitude should match what was stored in session storage.
 
   // Get the condition keyword and set Background picture
