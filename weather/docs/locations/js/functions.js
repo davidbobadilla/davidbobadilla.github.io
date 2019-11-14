@@ -312,7 +312,7 @@ function getHourly(URL) {
 let highTemp = $('.h-temp');
 let loTemp = $('.l-temp');
 let currentTemp = $('.c-temp');
-let feelTemp = $('.chill');
+let feelTemp = $('#chill');
 highTemp.innerHTML = sessStore.getItem('highTemp') + "°F";
 loTemp.innerHTML = sessStore.getItem('lowTemp') + "°F";
 currentTemp.innerHTML = sessStore.getItem('temperature') + "°F";
