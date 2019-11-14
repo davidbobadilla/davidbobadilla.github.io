@@ -381,6 +381,7 @@ function timeIndicator(hour){
 
   // Change background image
  function changeSummaryImage(weather){
+   
    console.log(`weather is: ${weather}`);
     // gets the backimage Id
     let x = document.getElementById('backimage'); 
@@ -406,7 +407,7 @@ function timeIndicator(hour){
          x.className += 'clouds';
          break;
      }       
-
+    }
 
 
 
@@ -417,4 +418,4 @@ statusContainer.setAttribute('class', 'hide'); // hides the status container
 
 
     
-}
+
