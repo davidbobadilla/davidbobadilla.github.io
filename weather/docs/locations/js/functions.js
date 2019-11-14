@@ -168,7 +168,7 @@ function getHourly(URL) {
   // Set the title with the location name at the first
   // Gets the title element so it can be worked with
   let pageTitle = document.querySelector('#page-title');
-  console.log(`pageTitle: ${pageTitle}`);
+  console.log(`The pageTitle: ${pageTitle}`);
   // Create a text node containing the full name 
   let fullNameNode = document.createTextNode(sessStore.getItem('fullName'));
   // inserts the fullName value before any other content that might exist
@@ -186,7 +186,7 @@ function getHourly(URL) {
 
   // Get the coordinates container for the location
   let latLong = $(".coords");
-  latLong.innerHTML = sessStore.getItem('coords');
+  latLong.innerHTML = sessStore.getItem('coords');;
   // The latitude and longitude should match what was stored in session storage.
 
   // Get the condition keyword and set Background picture
