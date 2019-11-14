@@ -79,16 +79,6 @@ fetchWeatherData(weatherURL);
 
 
 
-     // **********  Condition Component Icons  **********
-let conditionHour = currentHour;
-// Adjust counter based on current time
-for (let i = 0, x = 12; i < x; i++) {
- if (conditionHour >= 13) {
-  conditionHour = conditionHour - 12;
- }
- $('.forecast .o' + conditionHour).innerHTML = '<img src="' + currentData[i][2] + '" alt="hourly weather condition image">';
- conditionHour++;
-}
 
 
 
@@ -160,7 +150,7 @@ function timeIndicator(hour){
 
 
 
-  
+
 /* *************************************
 *  Fetch Weather Data
 ************************************* */
@@ -412,10 +402,17 @@ for (let i = 0, x = 12; i < x; i++) {
  windHour++;
 }
 
-
-
-
-
+     // **********  Condition Component Icons  **********
+     let conditionHour = currentHour;
+     // Adjust counter based on current time
+     for (let i = 0, x = 12; i < x; i++) {
+      if (conditionHour >= 13) {
+       conditionHour = conditionHour - 12;
+      }
+      $('.forecast .o' + conditionHour).innerHTML = '<img src="' + currentData[i][2] + '" alt="hourly weather condition image">';
+      conditionHour++;
+     }
+     
 
 
 
