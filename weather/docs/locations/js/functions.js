@@ -56,21 +56,27 @@ fetchWeatherData(weatherURL);
  
       // adds the class name to change the backgorund image
      console.log(weather);
+     if (weather.includes("sun","clear",)){weather= "clear";}
+     else if (weather.includes("cloud")) {weather = "clouds";}
+     else if (weather.includes("fog","foggy")){weather = "fog";}
+     else if (weather.includes("rainy","raining")){weather = "rain";}
+     else if (weather.includes("snowy","snowfall","blizzard")){weather = "snow";}
+     console.log(weather)
       switch(weather){
           case "clear":
-             x.className += 'clear';
+             x.className += ' clear';
           break;
           case "rain":
-             x.className += 'rain';
+             x.className += ' rain';
           break;
           case"fog":
-             x.className += 'fog';
+             x.className += ' fog';
           break;
           case"snow":
-             x.className += 'snow';
+             x.className += ' snow';
           break;
           case"clouds":
-          x.className += 'clouds';
+          x.className += ' clouds';
           break;
       }       
      }
@@ -422,10 +428,52 @@ for (let i = 0, x = 12; i < x; i++) {
 
 
 // Change the status of the containers
-contentContainer.setAttribute('class', ''); // removes the hide class from main
+// contentContainer.setAttribute('class', ''); // removes the hide class from main
+contentContainer.classList.remove("hide");
 statusContainer.setAttribute('class', 'hide'); // hides the status container
 
 
 
     
 
+
+
+
+
+
+
+
+
+
+
+
+
+// update condition index based on weather status
+// let weather = "";
+// if (weather.includes("sun")|| weather.includes("clear")){weather = "clear";}
+// else if (weather.includes("cloud")) {weather="cloudy";console.log(weather);}
+// else if (weather.includes("fog")) {weather="fog";}
+// else if (weather.includes("rain")) {weather="rain";}
+// else if (weather.includes("snow")) {weather="snow";}
+// console.log(weather);
+// switch (weather) {
+//   case "clear":
+//     x.classList.add("clear");
+//     break;
+//   case "cloudy":
+//       x.classList.add("cloud");
+//     break;
+//   case "fog":
+//       x.classList.add("fog");
+//     break;
+//   case "rain":
+//       x.classList.add("rain");
+//     break;
+//   case "snow":
+//       x.classList.add("snow");
+//     break;
+//   default:
+//     console.log("Error: Weather type is invalid.")
+//     break;
+// }
+// console.log(`Value of conditionIndex: ${conditionIndex}`);
