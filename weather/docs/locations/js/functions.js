@@ -130,12 +130,15 @@ window.onload = copyright();
 
 function buildWC(speed, temp){
     let feelTemp = document.getElementById("chill"); // grab the span used to hold the wc
+    console.log(speed);
+    console.log(temp);
     let wc = 35.74 + 0.6215 * temp - 35.75 * Math.pow(speed, 0.16) + 0.4275 * temp * Math.pow(speed, 0.16); 
     console.log(`The wind chill is: ${wc}`); // log wc to console
     wc = Math.floor(wc); 
     wc = (wc > temp) ? temp:wc; 
     console.log(`The wind chill is: ${wc}`); // log wc to console
-    feelTemp.innerHTML = wc; // output wc 
+    // feelTemp.innerHTML = wc; // output wc 
+    return wc;
   }
 
 
@@ -325,10 +328,10 @@ currentTemp.innerHTML = sessStore.getItem('temperature') + "°F";
 // Set the wind information
 let speed = $('.wind');
 let gusts = $('.gusts');
-speed.innerHTML = sessStore.getItem('windSpeed');
-gusts.innerHTML = sessStore.getItem('WindGust'+mph);
+speed.innerHTML = sessStore.getItem('WindSpeed')+ "mph";
+gusts.innerHTML = sessStore.getItem('WindGust')+ "mph";
 // Calculate feel like temp
-feelTemp.innerHTML = buildWC(sessStore.getItem('windSpeed'), sessStore.getItem('temperature')) + "°F";
+feelTemp.innerHTML = buildWC(sessStore.getItem('WindSpeed'), sessStore.getItem('temperature')) + "°F";
 
 
 
