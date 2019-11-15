@@ -324,9 +324,9 @@ loTemp.innerHTML = sessStore.getItem('lowTemp') + "°F";
 currentTemp.innerHTML = sessStore.getItem('temperature') + "°F";
 // Set the wind information
 let speed = $('.wind');
-let gust = $('.gusts');
+let gusts = $('.gusts');
 speed.innerHTML = sessStore.getItem('windSpeed');
-gust.innerHTML = sessStore.getItem('windGust');
+gusts.innerHTML = sessStore.getItem('WindGust'+mph);
 // Calculate feel like temp
 feelTemp.innerHTML = buildWC(sessStore.getItem('windSpeed'), sessStore.getItem('temperature')) + "°F";
 
