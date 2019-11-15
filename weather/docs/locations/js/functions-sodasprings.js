@@ -164,7 +164,7 @@ function timeIndicator(hour){
 *  Fetch Weather Data
 ************************************* */
 function fetchWeatherData(weatherURL){
-  let cityName = 'Preston'; // The data we want from the weather.json file
+  let cityName = 'Soda Springs'; // The data we want from the weather.json file
   fetch(weatherURL)
   .then(function(response) {
   if(response.ok){
