@@ -175,7 +175,7 @@ function fetchWeatherData(weatherURL){
   .then(function(data){
     // Check the data object that was retrieved
     console.log(data);
-    // data is the full JavaScript object, but we only want the preston part
+    // data is the full JavaScript object, but we only want the Soda Springs part
     // shorten the variable and focus only on the data we want to reduce typingfd
     let p = data[cityName];
 
@@ -193,8 +193,9 @@ function fetchWeatherData(weatherURL){
     console.log(`The coordinates are: ${latLong}`);
     // Create a JSON object containing the full name, latitude and longitude
     // and store it into local storage.
-    const prestonData = JSON.stringify({fullName,latLong});
-    locStore.setItem("Preston,ID", prestonData);
+    const sodaspringsData = JSON.stringify({fullName,latLong});
+    locStore.setItem("Soda Springs,ID", sodaspringsData);
+    console.log(sodaspringsData);
     
     // **********  Get the current conditions information  **********
     // As the data is extracted from the JSON, store it into session storage
@@ -293,14 +294,14 @@ function getHourly(URL) {
   // inserts the fullName value before any other content that might exist
   pageTitle.insertBefore(fullNameNode, pageTitle.childNodes[0]);
   // When this is done the title should look something like this:
-  // Preston, Idaho | The Weather Site                    
+  // Soda Springs, Idaho | The Weather Site                    
                      
  }
 
   // Get the h1 to display the city location
   let contentHeading = document.querySelector('#contentHeading');
   contentHeading.innerHTML = sessStore.getItem('fullName');
-  // The h1 in the main element should now say "Preston, Idaho"
+  // The h1 in the main element should now say "Soda Springs, Idaho"
 
 
   // Get the coordinates container for the location
