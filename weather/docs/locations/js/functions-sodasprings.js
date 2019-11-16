@@ -176,7 +176,7 @@ function fetchWeatherData(weatherURL){
     // Check the data object that was retrieved
     console.log(data);
     // data is the full JavaScript object, but we only want the preston part
-    // shorten the variable and focus only on the data we want to reduce typing
+    // shorten the variable and focus only on the data we want to reduce typingfd
     let p = data[cityName];
 
     // **********  Get the location information  **********
@@ -195,6 +195,7 @@ function fetchWeatherData(weatherURL){
     // and store it into local storage.
     const prestonData = JSON.stringify({fullName,latLong});
     locStore.setItem("Preston,ID", prestonData);
+    
     // **********  Get the current conditions information  **********
     // As the data is extracted from the JSON, store it into session storage
     sessStore.setItem("fullName",fullName);
