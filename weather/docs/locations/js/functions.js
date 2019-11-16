@@ -56,11 +56,11 @@ fetchWeatherData(weatherURL);
  
       // adds the class name to change the backgorund image
      console.log(weather);
-     if (weather.includes("sun","clear",)){weather= "clear";}
-     else if (weather.includes("cloud")) {weather = "clouds";}
+     if (weather.includes("sun","clear","sunny","mostly sunny","partly sunny","mostly clear")){weather= "clear";}
+     else if (weather.includes("cloud","partly cloudy","overcast","cloudy")) {weather = "clouds";}
      else if (weather.includes("fog","foggy")){weather = "fog";}
-     else if (weather.includes("rainy","raining")){weather = "rain";}
-     else if (weather.includes("snowy","snowfall","blizzard")){weather = "snow";}
+     else if (weather.includes("rainy","raining","freezing rain","showers","thunderstorm")){weather = "rain";}
+     else if (weather.includes("snowy","snowfall","blizzard","sleet","snow showers")){weather = "snow";}
      console.log(weather)
       switch(weather){
           case "clear":
