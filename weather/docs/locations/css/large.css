@@ -33,6 +33,12 @@ ul li a{
     font-family: 'Oswald';
     list-style-type: none;
 }
+ul li{
+  font-size: 40px;
+}
+#chill{
+  font-size: 35px;
+}
 li{
     list-style-type: none;
 }
