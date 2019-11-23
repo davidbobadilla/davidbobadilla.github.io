@@ -30,7 +30,7 @@ function getGeoLocation() {
      console.log(`Locale values are: ${locale}.`);
 
      // Call getLocation function, send locale as a parameter
-     getLocation(locale);
+     getLocation(locale); // Sends the location to the getLocation function
 
      // Store the values to session storage
      window.sessionStorage.setItem("locale", locale);
