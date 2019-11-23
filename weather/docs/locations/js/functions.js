@@ -440,7 +440,7 @@ for (let i = 0, x = 12; i < x; i++) {
      //getlocation Function
     // Gets location information from the NWS API
 function getLocation(locale) {
-  const URL = "https://api.weather.gov/points/" + locale; 
+  const URL = "https://api.weather.gov/points/" + locale; // This request location from NWS API
   // NWS User-Agent header (built above) is the second parameter 
   fetch(URL, idHeader) 
   .then(function(response){
