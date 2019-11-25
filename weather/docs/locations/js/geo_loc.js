@@ -1,7 +1,13 @@
 //functions will work together to get weather informaton for the current location and populate a web page with the data.
 'use strict';
 
+// Setup sessionStorage
+var sessStore = window.sessionStorage;
 
+// Setup localStorage
+var locStore = window.localStorage;
+var $ = document.querySelector.bind(document);
+var $$ = document.querySelectorAll.bind(document);
 // Set global variable for custom header required by NWS API
 var idHeader = {
     headers: {
