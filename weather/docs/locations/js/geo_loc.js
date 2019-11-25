@@ -16,7 +16,6 @@ var idHeader = {
    };
 
 
-var sessStore = window.sessionStorage;
 
 // Call the function to get our location
 getGeoLocation();
