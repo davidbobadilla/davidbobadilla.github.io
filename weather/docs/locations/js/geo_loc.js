@@ -22,7 +22,7 @@ getGeoLocation();
 
 //get the current location by longitude and latitude.
 function getGeoLocation() {
- const status = document.getElementById('#status');
+ const status = document.getElementById('status');
  status.innerHTML = 'Getting Location...';
 
  if (navigator.geolocation) {
