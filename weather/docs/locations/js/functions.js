@@ -551,6 +551,7 @@ fetch(URL, idHeader)
   window.sessionStorage.setItem("feelsLike", buildWC(windSpeed, currTemp));
   window.sessionStorage.setItem("condition", data.properties.textDescription);
 
+
   // Call the getForecast function
 
   // Call the getHourly function
