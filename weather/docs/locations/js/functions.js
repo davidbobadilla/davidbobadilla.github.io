@@ -459,15 +459,15 @@ function getLocation(locale) {
     let fullName = data.properties.relativeLocation.properties.city + ", " + data.properties.relativeLocation.properties.state;
     window.sessionStorage.setItem("fullName", fullName);
     
-    // Create info for localStorage
+    // Create information for localStorage
     let homeData = JSON.stringify({fullName,locale});
     locStore.setItem("Rexburg, ID", homeData);
 
 
-    // set lat & long coords + elevation
+    // set lat & long coords and elevation
   let latlong = $(".coords");
   latlong.innerHTML = sessStore.getItem("locale"); 
-    
+
   let elevat= $("#ele");
   elevat.innerHTML = "Elevation: " + sessStore.getItem("stationElevation") + " ft";
   
