@@ -457,13 +457,20 @@ function getLocation(locale) {
     window.sessionStorage.setItem("locName", data.properties.relativeLocation.properties.city); 
     window.sessionStorage.setItem("locState", data.properties.relativeLocation.properties.state);
     let fullName = data.properties.relativeLocation.properties.city + ", " + data.properties.relativeLocation.properties.state;
-    window.sessionStorage.setItem("fullName", fullName); 
-    const homeData = JSON.stringify({fullName,locale});
+    window.sessionStorage.setItem("fullName", fullName);
+    
+    // Create info for localStorage
+    let homeData = JSON.stringify({fullName,locale});
     locStore.setItem("Rexburg, ID", homeData);
 
-  //    // Get the coordinates container for the location
-  // let homeData = $(".homecoords");
-  // homeData.innerHTML = sessStore.getItem('locale');
+
+    // set lat & long coords + elevation
+  let latlong = $(".coords");
+  latlong.innerHTML = sessStore.getItem("locale"); 
+    
+  let elevat= $("#ele");
+  elevat.innerHTML = "Elevation: " + sessStore.getItem("stationElevation") + " ft";
+  
     
     // Store three URL's for stationId's, forecast and hourly forecast
     // The URL's are in the returned location data object

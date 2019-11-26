@@ -29,9 +29,10 @@ function getGeoLocation() {
     navigator.geolocation.getCurrentPosition(function (position) {
      const lat = position.coords.latitude;
      const long = position.coords.longitude;
+     
   
      // Combine the values for use later
-     const locale = lat + "," + long;
+     const locale = lat.toFixed(4) + "," + long.toFixed(4);// Make coordinates to have 4 length
      console.log(`Locale values are: ${locale}.`);
 
      // Call getLocation function, send locale as a parameter
