@@ -373,17 +373,7 @@ for (let i = 0, x = 12; i < x; i++) {
 }
 console.log(currentData);
 
-// Loop through array inserting data
-// Start with the outer container that matchs the current time
-// tempHour = currentHour;
-// for (let i = 0, x = 12; i < x; i++) {
-//  if (tempHour >= 13) {
-//   tempHour = tempHour - 12;
-//  }
-//  console.log(`Start container is: #temps o.${tempHour}`);
-//  $('.temperature .o' + tempHour).innerHTML = currentData[i][0];
-//  tempHour++;
-// }
+
 
 
 
@@ -553,15 +543,38 @@ fetch(URL, idHeader)
 
 
   // Call the getForecast function
-
+  getForecast(sessStore.getItem("forecastURL"));
   // Call the getHourly function
-  
+  getHourly(sessStore.getItem("forecastHourlyURL"));
  }) 
 .catch(error => console.log('There was a getWeather error: ', error)) 
 } // end getWeather function
 
 
+function getForecast(URL) {
+  fetch(URL, idHeader)
+  .then(function(response){
+    if(response.ok){
+      return response.json();
+    }
+    throw new ERROR("Response was not OK.")
+  })
+  .then(function (data) {
+    console.log("getForecast(): From getForecast function:");
+    console.log(data); // log data returned from NWS API
 
+    // Extract & store highTemp
+    let highTemp = data.properties.periods[0].temperature;
+    console.log(`getForecast(): Value of highTemp is: ${highTemp}`);
+    sessStore.setItem("highTemp", highTemp);
+
+    // Extract & store lowTemp
+    let lowTemp = data.properties.periods[1].temperature;
+    console.log(`getForecast(): Value of lowTemp is: ${lowTemp}`);
+    sessStore.setItem("lowTemp", lowTemp);
+
+  })
+ }
 
 
 
