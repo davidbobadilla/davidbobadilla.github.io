@@ -498,7 +498,7 @@ fetch(stationsURL, idHeader)
 
   // Store station ID and elevation (in meters - will need to be converted to feet) 
   let stationId = data.features[0].properties.stationIdentifier; 
-  let stationElevation = data.features[0].properties.elevation.value; 
+  let stationElevation = metersToFeet(data.features[0].properties.elevation.value); 
   console.log('Station and Elevation are: ' + stationId, stationElevation); 
   // You may want to convert the elevation to feet before storing the value
   // Store data to sessionStorage 
@@ -577,11 +577,21 @@ function getForecast(URL) {
  }
 
 
+// convert celsius to fahrenheit
+function convertCelcius(celsTemp) {
+  return ((celsTemp * 9/5) + 32).toFixed(0);
+}
 
 
+// convert meters/sec to miles/hour
+function mpsToMph (speed) {
+  return (speed / 2.237).toFixed(1);
+}
 
-
-
+// convert meters to feet
+function metersToFeet(meters) {
+  return (meters * 3.281).toFixed(0);
+}
 
 
 
