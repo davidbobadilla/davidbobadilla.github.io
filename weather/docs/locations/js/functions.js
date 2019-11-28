@@ -572,6 +572,19 @@ function getForecast(URL) {
     let lowTemp = data.properties.periods[1].temperature;
     console.log(`getForecast(): Value of lowTemp is: ${lowTemp}`);
     sessStore.setItem("lowTemp", lowTemp);
+    //Extract & store feels like temp.
+    let feels = $("#chill");
+    feels.innerHTML =(sessStore.getItem("feelsLike"));
+
+    //Extract & store windspeed.
+    let windsp= $(".wind");
+    windsp.innerHTML = "Wind Speed: " + sessStore.getItem("windSpeed") + "mph";
+
+    //Extract & store gusts
+    let windGust = $(".gusts");
+    windGust.innerHTML = "Gusts: " + sessStore.getItem("windGust") + "mph";
+
+
 
   })
  }
