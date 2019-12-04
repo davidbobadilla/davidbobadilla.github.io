@@ -28,4 +28,26 @@ ul li a{
 ul li{
   font-size: 40px;
 }
+
+li{
+    list-style-type: none;
+}
+
+a:hover {
+    background-color: navy;
+  }
+ a:active {
+    color: red;
+  }
+
+
+
+
+
+
+
+
+
+
+  
 }
