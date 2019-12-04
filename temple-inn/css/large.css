@@ -40,7 +40,24 @@ a:hover {
     color: red;
   }
 
+  .navegacion{
+    display:flex;
+    justify-content: space-evenly;
+    background-color: #3F774D;
 
+}
+
+footer{
+    background-color: #3F5077;
+    padding: 1em 0 1em 0;
+    text-align: center;
+    margin:.9em;
+  }
+
+ span{
+     color: white;
+     font-size: 18px;
+ }
 
 
 
