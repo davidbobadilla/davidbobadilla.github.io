@@ -1,0 +1,31 @@
+@media only screen and (min-width: 700px) {
+    .logobox {
+    display: flex;
+    flex: 1;
+    background-color:#3F5077;
+    color: white;
+    width: 100%;
+    margin: 1px;
+    
+}
+.navegacion{
+    display:flex;
+    justify-content: space-evenly;
+    background-color: #3F774D;
+
+}
+
+
+ul li a{
+    flex-direction: row;
+    color:white;
+    margin: 1px;
+    padding:3px;
+    font-size: 18px;
+    font-family: 'Oswald';
+    list-style-type: none;
+}
+ul li{
+  font-size: 40px;
+}
+}
