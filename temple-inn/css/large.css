@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Pacifico|Playfair+Display&display=swap');
+
+
 @media only screen and (min-width: 700px) {
     * {
         box-sizing: border-box;
         margin: 0;
       }
+
+
+      .logo {
+        font-family: 'Fjalla One';
+    }
 
 #tlogo {
     width: 80px;
@@ -28,7 +36,7 @@ ul li a{
     margin: 1px;
     padding:3px;
     font-size: 18px;
-    font-family: 'Oswald';
+    font-family: 'Pacifico';
     list-style-type: none;
 }
 ul li{
@@ -68,7 +76,7 @@ footer{
 
 
 
-
+ 
 
 
 
