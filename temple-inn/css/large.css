@@ -64,9 +64,14 @@ a:hover {
 
 }
 
+.everything{
+    display: grid;
+    grid-column: auto;
+}
 
-
-
+#foto{
+    width: 100%;
+}
 
 
 
