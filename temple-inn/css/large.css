@@ -64,6 +64,33 @@ a:hover {
 
 }
 
+
+.principalt{
+    width: 100%
+    grid-area
+}
+.principalt {
+    display: grid;
+    grid-column: 1fr 1fr 1fr 1fr;
+    grid-row: 1fr 1fr 1fr 1fr;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 footer{
     background-color: rgb(44, 107, 202);
     padding: 1em 0 1em 0;
