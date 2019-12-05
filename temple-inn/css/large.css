@@ -12,7 +12,7 @@
     .logobox {
     display: flex;
     flex: 1;
-    background-color:rgb(207, 9, 9);
+    background-color:rgb(44, 107, 202);
     color: white;
     width: 100%;
     margin: 1px;
@@ -38,7 +38,7 @@ li{
 }
 
 a:hover {
-    background-color: rgba(6, 57, 199, 0.767);
+    background-color: rgba(29, 62, 151, 0.767);
   }
  a:active {
     color: rgb(4, 221, 185);
@@ -47,12 +47,12 @@ a:hover {
   .navegacion{
     display:flex;
     justify-content: space-evenly;
-    background-color: rgb(25, 160, 97);
+    background-color: rgb(75, 29, 136);
 
 }
 
 footer{
-    background-color: rgb(207, 9, 9);
+    background-color: rgb(44, 107, 202);
     padding: 1em 0 1em 0;
     text-align: center;
     margin:.9em;
