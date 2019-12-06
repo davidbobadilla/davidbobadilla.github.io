@@ -113,10 +113,15 @@ a:hover {
 
 #ser{
     color:white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
-    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    grid-column: 2/4;
+    text-align: center;
+        
 }
-
+    
+.servicio{
+    color: white;
+}
 
 
 
