@@ -116,11 +116,15 @@ a:hover {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     grid-column: 2/4;
     text-align: center;
-        
+
 }
     
 .servicio{
-    color: white;
+    color: rgb(255, 255, 255);
+	background: radial-gradient(rgb(5, 134, 134), #197996);
+	border: 1px solid #000; 
+    font-size: 16px;    
+    
 }
 
 
