@@ -230,9 +230,13 @@ a:hover {
 .links{
     color:rgb(86, 236, 236);
 }
+.title{
+    text-align: center;
+}
 .rec{
     width: 600px;
     height: 600px;
+    margin: 30px;
 }
 
 
