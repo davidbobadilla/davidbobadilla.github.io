@@ -82,6 +82,12 @@ a:hover {
     grid-template-rows: 1fr;
     background-color: rgb(0, 0, 0);
 }
+.everything3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: rgb(0, 0, 0);
+}
 #foto{
     width: 100%;
     grid-column: 2/5;
@@ -353,10 +359,15 @@ a:hover {
 
 #lastcontact{
     color:white;
-    
+    grid-column: 2/3;
+    text-align: center;
+    font-size: 30px;
 }
 
-
+#map{
+    grid-column: 3/4;
+    height: 550px;
+}
 
 
 
