@@ -37,13 +37,67 @@
 
     <main>
     <div class="everything">
-    <p id="lll">
-    <h1>Wanting to visit?</h1>
-    Let us take care of everything and focus on what is more important. 
-    <button id="boton"type="button">Check Availability Now!</button></p>
-     <img id="foto" src="/temple-inn/images/salt lake temple (1) (1)-min (1).jpg">
+    <h1>Book your room now!</h1>
+    <h3>All fields are required</h3>
+
+    <!-- start of the form -->
+    <form>
+            <div class="col-25">
+            <label for="fname">First Name</label>
+            </div>
+            <div class="col-75">
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            </div>
+            <div class="col-25">
+            <label for="lname">Last Name</label>
+            </div>
+            <div class="col-75">
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            </div>
+            <div class="col-25">
+            <label for="lname">Email</label>
+            </div>
+            <div class="col-75">
+            <input type="text" id="lname" name="email" placeholder="Your email@">
+            </div>
+            <div class="col-75">
+            <input type="text" id="phone" name="phone" placeholder="phone number">
+            </div>
+            <label for="guests"># of Guests (including you):</label>
+            <input id="guests" type="number" min="1" max="4">
+            <label for="resDate">Check In Date:</label>
+            <input id="resDate" type="date">
+            <label for="resDate">Check Out Date:</label>
+            <input id="resDate" type="date">
+            
+            Select City and State
+            <select name="carlist" form="carform">
+            <option value="volvo">Los Angeles, CA</option>
+            <option value="saab">Provo, UT</option>
+            <option value="opel">Rexburg, ID</option>
+            <option value="audi">Idaho Falls, ID</option>
+            </select>
+
+            <div class="row">
+                    <div class="col-25">
+                      <label for="subject">Special Accomodations</label>
+                    </div>
+                    <div class="col-75">
+                      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                    </div>
+                  </div>
+            <button id="submit">Submit</button>
+                  
+    </form>
+
+
+    <div id="resResult" class="hide">
+            <h2>Reservation Details</h2>
+            <pre></pre>
+    </div>
+          
          
-         
+    <!-- End of the form -->
     </div>    
     </main>
 </div>

@@ -428,18 +428,25 @@ a:hover {
 }
 
 
+/* Form of the reservation page */
 
+body{
+    margin: 0 1rem;
+  }
+  form *{
+    display: block;
+  }
+  input{
+    margin-bottom: .5rem;
+  }
+  .hide{
+    display: none;
+  }
+#resResult{
+    color:white;
+}
 
-
-
-
-
-
-
-
-
-
-
+/*End Form of the reservation page */
 
 
 
