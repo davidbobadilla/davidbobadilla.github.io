@@ -385,6 +385,7 @@ a:hover {
     grid-column:1/2;
     margin: 10px;
     font-size: 20px;
+    font-family: cursive;
 }
 #recep1{
     display: flex;
@@ -393,6 +394,7 @@ a:hover {
     grid-column:2/3;
     margin: 10px;
     font-size: 20px;
+    font-family: cursive;
 }
 #banquet {
     max-width: 400px;
