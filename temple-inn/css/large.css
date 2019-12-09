@@ -342,7 +342,9 @@ a:hover {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
+    grid-column: 1/2;
   }
+
   
   .col-25 {
     float: left;
@@ -375,8 +377,13 @@ a:hover {
     grid-column: 3/4;
     height: 550px;
 }
-.container{
-    grid-column: 1/2;
+
+.container1{
+    grid-column: 3/4;
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+      
 }
 #recep{
     display: flex;
