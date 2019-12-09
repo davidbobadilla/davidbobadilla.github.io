@@ -70,7 +70,12 @@ a:hover {
     grid-template-rows: 1fr 1fr 1fr;
     background-color: rgb(0, 0, 0);
 }
-
+.everything1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: rgb(0, 0, 0);
+}
 #foto{
     width: 100%;
     grid-column: 2/5;
@@ -240,7 +245,6 @@ a:hover {
 
 .row {
     display: flex;
-
     flex-wrap: wrap;
     padding: 0 4px;
     grid-row: 1/2;
@@ -265,17 +269,12 @@ a:hover {
 #mish {
     color: white;
     grid-column: 2/3;
-    grid-row: 1/4;
+    grid-row: 1;
     margin:15px;
 }
 #misional{
     font-size:18px;
     font-family: Arial, Helvetica, sans-serif;
-    
-}
-
-#contact1{
-    grid-column: 4/5;
     
 }
 
