@@ -94,6 +94,12 @@ a:hover {
     grid-template-rows: 1fr;
     background-color: rgb(0, 0, 0);
 }
+.everything5{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: rgb(0, 0, 0);
+}
 #foto{
     width: 100%;
     grid-column: 2/5;
@@ -359,6 +365,11 @@ a:hover {
   }
   #longform{
       color:white;
+      background: radial-gradient(rgb(5, 134, 134), #197996);
+	border: 1px solid #000; 
+    font-size: 16px;    
+    margin: 30px;
+    font-family: sans-serif;
   }
   
   /* Clear floats after the columns */
@@ -452,6 +463,24 @@ body{
     margin:5px;
 }
 /*End Form of the reservation page */
+
+#rese{
+    color:white;
+}
+#re{
+    color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
