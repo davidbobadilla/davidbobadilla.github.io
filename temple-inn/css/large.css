@@ -357,6 +357,9 @@ a:hover {
     width: 75%;
     margin-top: 6px;
   }
+  #longform{
+      color:white;
+  }
   
   /* Clear floats after the columns */
   .row:after {
@@ -445,7 +448,9 @@ body{
 #resResult{
     color:white;
 }
-
+#subject1{
+    margin:5px;
+}
 /*End Form of the reservation page */
 
 

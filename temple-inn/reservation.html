@@ -41,59 +41,77 @@
     <h3>All fields are required</h3>
 
     <!-- start of the form -->
-    <form>
+    <div id="longform">
+            <div class="row">
             <div class="col-25">
             <label for="fname">First Name</label>
             </div>
             <div class="col-75">
             <input type="text" id="fname" name="firstname" placeholder="Your name..">
-            </div>
+            </div></div>
+            <div class="row">
             <div class="col-25">
             <label for="lname">Last Name</label>
             </div>
             <div class="col-75">
             <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-            </div>
+            </div></div>
+            <div class="row">
             <div class="col-25">
             <label for="lname">Email</label>
             </div>
             <div class="col-75">
             <input type="text" id="lname" name="email" placeholder="Your email@">
-            </div>
+            </div></div>
+            <div class="row">
             <div class="col-25">
+            <label for="lname">Phone Number</label>
+            </div>
+            <div class="col-75">
             <input type="text" id="phone" name="phone" placeholder="phone number">
+            </div></div>
+            <div class="row">
+            <div class="col-25">
+            <label for="lname">Select City and State</label>
             </div>
             <div class="col-75">
-             Select City and State
-            <select name="carlist" form="carform">
-            <option value="volvo">Los Angeles, CA</option>
-            <option value="saab">Provo, UT</option>
-            <option value="opel">Rexburg, ID</option>
-            <option value="audi">Idaho Falls, ID</option>
+            <select name="citylist" form="state">
+            <option value="angeles">Los Angeles, CA</option>
+            <option value="provo">Provo, UT</option>
+            <option value="rexburg">Rexburg, ID</option>
+            <option value="ifalls">Idaho Falls, ID</option>
             </select>
+            </div></div>
+            <div class="row">
+            <div class="col-25">
+            <label for="lname"># of Guests (including you):</label>
             </div>
             <div class="col-75">
-            <label for="guests"># of Guests (including you):</label>
-            <input id="guests" type="number" min="1" max="4"></div>
+            <input id="guests" type="number" min="1" max="4"></div></div>
+            <div class="row">
+            <div class="col-25">
+            <label for="lname">Check In Date:</label>
+            </div>
             <div class="col-75">
-            <label for="resDate">Check In Date:</label>
-            <input id="resDate" type="date"></div>
-            <div class="col-75"></div>
-            <label for="resDate">Check Out Date:</label>
-            <input id="resDate" type="date">
-            
-           
-
+            <input id="resDate" type="date"></div></div>
+            <div class="row">
+            <div class="col-25">
+            <label for="lname">Check Out Date:</label>
+            </div>
+            <div class="col-75">
+            <input id="resDate" type="date"></div></div>
+        
             <div class="row">
                     <div class="col-25">
-                      <label for="subject">Special Accomodations</label>
+                      <label for="subject">Special 
+                          <br>Accomodations</label>
                     </div>
                     <div class="col-75">
-                      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                      <textarea id="subject1" name="subject" placeholder="Write something.." style="height:200px"></textarea>
                     </div>
                   </div>
+            
             <button id="submit">Submit</button>
-                  
     </form>
 
 
