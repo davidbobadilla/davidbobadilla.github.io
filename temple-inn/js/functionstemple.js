@@ -14,7 +14,7 @@ var $$ = document.querySelectorAll.bind(document);
 document.addEventListener("DOMContentLoaded", function(){
 
 //Get closure json data
-let templeURL = "/temple-inn/jasonfinished.json";
+let templeURL = "/temple-inn/newfinished.json";
 fetchTempleData(templeURL);
 
 
@@ -41,49 +41,21 @@ function fetchTempleData(templeURL){
     let p = data;
 
     // **********  Get the location information  **********
-    let rexburg = p.Rexburg.December;
+    let rexburg = p.Rexburg.Dates;
     console.log(rexburg);
-    let locState = p.properties.relativeLocation.properties.state;
-    // Put them together
-    let fullName = locName+', '+locState;
     // See if it worked, using ticks around the content in the log
-    console.log(`fullName is: ${fullName}`);
+    console.log(`Date info is: ${rexburg}`);
     // Get the longitude and latitude and combine them to
-    // a comma separated single string
-    const latLong = p.properties.relativeLocation.geometry.coordinates[1] + ","+ p.properties.relativeLocation.geometry.coordinates[0];
-    console.log(`The coordinates are: ${latLong}`);
-    // Create a JSON object containing the full name, latitude and longitude
-    // and store it into local storage.
-    const prestonData = JSON.stringify({fullName,latLong});
-    locStore.setItem("Preston,ID", prestonData);
+    // // a comma separated single string
+    // const latLong = p.properties.relativeLocation.geometry.coordinates[1] + ","+ p.properties.relativeLocation.geometry.coordinates[0];
+    // console.log(`The coordinates are: ${latLong}`);
+    // // Create a JSON object containing the full name, latitude and longitude
+    // // and store it into local storage.
+    const rex = JSON.stringify({rexburg});
+    locStore.setItem("Rexburg", rex);
     // **********  Get the current conditions information  **********
     // As the data is extracted from the JSON, store it into session storage
-    sessStore.setItem("fullName",fullName);
-    sessStore.setItem("latLong",latLong);
-    // Get the temperature data
-    const tempera = p.properties.relativeLocation.properties.temperature;
-    sessStore.setItem("temperature",tempera);
-    console.log(`Temperature is: ${tempera}`);
-
-    // Get the wind data 
-    const windSpeed = p.properties.relativeLocation.properties.windSpeed;
-    sessStore.setItem("WindSpeed",windSpeed);
-    console.log(`The Windspeed is: ${windSpeed}`);
-
-    // Get wind Gust data
-    const windGust = p.properties.relativeLocation.properties.windGust;
-    sessStore.setItem("WindGust", windGust);
-    console.log(`The Wind Gust is: ${windGust}`);
-
-    //Get high temperature
-    const highTemp = p.properties.relativeLocation.properties.highTemp;
-    sessStore.setItem("highTemp",highTemp);
-    console.log(`The high temperature is: ${highTemp}`);
-
-    //Get low temperature
-    const lowTemp = p.properties.relativeLocation.properties.lowTemp;
-    sessStore.setItem("lowTemp",lowTemp);
-    console.log(`The low temperature is: ${lowTemp}`);
+    sessStore.setItem("Rexburg",rexburg);
 
     
   })
@@ -151,40 +123,40 @@ window.onload = copyright();
 
 // Start of form for the reservation page
 
-document.addEventListener("DOMContentLoaded", ()=>{
-    document.querySelector('#submit').addEventListener("click", processData);
-  })
+// document.addEventListener("DOMContentLoaded", ()=>{
+//     document.querySelector('#submit').addEventListener("click", processData);
+//   })
   
-  let reservations = [];
-  let processData = (event) => {
-    // stop the form from submitting
-    event.preventDefault();
-    let reservation = {
-    guests: document.querySelector('#guests').value,
-    resDate: document.querySelector('#resDate').value
-    }
-  // adds reservation to the end of the array of all reservations
-  reservations.push(reservation);
-  // reset the first, and only, form
-  document.forms[0].reset;
-  // see results in console
-  console.log('newRes', {reservations});
+//   let reservations = [];
+//   let processData = (event) => {
+//     // stop the form from submitting
+//     event.preventDefault();
+//     let reservation = {
+//     guests: document.querySelector('#guests').value,
+//     resDate: document.querySelector('#resDate').value
+//     }
+//   // adds reservation to the end of the array of all reservations
+//   reservations.push(reservation);
+//   // reset the first, and only, form
+//   document.forms[0].reset;
+//   // see results in console
+//   console.log('newRes', {reservations});
   
   
-    // Store to session Storage
-    window.sessionStorage.setItem("reservations", JSON.stringify(reservations));
-    // Retrieve from session storage
-    let resList = JSON.parse(window.sessionStorage.getItem("reservations"));
-    console.log(resList);
+//     // Store to session Storage
+//     window.sessionStorage.setItem("reservations", JSON.stringify(reservations));
+//     // Retrieve from session storage
+//     let resList = JSON.parse(window.sessionStorage.getItem("reservations"));
+//     console.log(resList);
     
-    // inject to the page
-  const resDetails = document.querySelector("#resResult pre");
-  resDetails.textContent = "\n" + JSON.stringify(reservations, "\t", 2);
+//     // inject to the page
+//   const resDetails = document.querySelector("#resResult pre");
+//   resDetails.textContent = "\n" + JSON.stringify(reservations, "\t", 2);
     
-  // display the results
-  document.querySelector("#resResult").classList.remove("hide");
+//   // display the results
+//   document.querySelector("#resResult").classList.remove("hide");
   
-  }
+//   }
 
 // end reservation form 
 
@@ -230,87 +202,87 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
 
 
-// example
-$("#reservation-form").addEventListener('submit', function(event){event.preventDefault();});
+// // example
+// $("#reservation-form").addEventListener('submit', function(event){event.preventDefault();});
 
-function getContactFormData() {
-    let fullName = $("#full-name");
-    let emailAddress = $("#email-address");
-    let subject = $("#subject");
-    let message = $("#message");
-    sesStor.setItem("contact-fullName", fullName.value);
-    sesStor.setItem("contact-emailAddress", emailAddress.value);
-    sesStor.setItem("contact-subject", subject.value);
-    sesStor.setItem("contact-message", message.value);
-    console.log(`getContactFormData(): Successfully stored the contact form data into session storage.`);
-  }
+// function getContactFormData() {
+//     let fullName = $("#full-name");
+//     let emailAddress = $("#email-address");
+//     let subject = $("#subject");
+//     let message = $("#message");
+//     sesStor.setItem("contact-fullName", fullName.value);
+//     sesStor.setItem("contact-emailAddress", emailAddress.value);
+//     sesStor.setItem("contact-subject", subject.value);
+//     sesStor.setItem("contact-message", message.value);
+//     console.log(`getContactFormData(): Successfully stored the contact form data into session storage.`);
+//   }
   
-  function processReservationData() {
-    let reservation = {
-      location: $("#res-location").value,
-      checkInDate: $("#res-check-in-date").value,
-      checkOutDate: $("#res-check-out-date").value,
-      roomType: $("#res-room-type").value,
-      numberOfRooms: $("#res-num-of-rooms").value,
-      firstName: $("#res-first-name").value,
-      lastName: $("#res-last-name").value,
-      emailAddress: $("#res-email-address").value,
-      phoneNumber: $("#res-phone-number").value,
-      country: $("#res-country").value,
-      state: $("#res-state").value
-    }
-    console.log(`Value of reservation object:`);
-    console.log(reservation);
+//   function processReservationData() {
+//     let reservation = {
+//       location: $("#res-location").value,
+//       checkInDate: $("#res-check-in-date").value,
+//       checkOutDate: $("#res-check-out-date").value,
+//       roomType: $("#res-room-type").value,
+//       numberOfRooms: $("#res-num-of-rooms").value,
+//       firstName: $("#res-first-name").value,
+//       lastName: $("#res-last-name").value,
+//       emailAddress: $("#res-email-address").value,
+//       phoneNumber: $("#res-phone-number").value,
+//       country: $("#res-country").value,
+//       state: $("#res-state").value
+//     }
+//     console.log(`Value of reservation object:`);
+//     console.log(reservation);
   
-    sesStor.setItem("reservation", JSON.stringify(reservation)); // store to session storage
-    // document.forms[0].reset; // reset form
-    // console.log("Reset form");
+//     sesStor.setItem("reservation", JSON.stringify(reservation)); // store to session storage
+//     // document.forms[0].reset; // reset form
+//     // console.log("Reset form");
   
-    reservationForm.classList.add("hide");
-    reservationStatus.classList.remove("hide");
-    console.log("Hid reservation form, showed status box");
+//     reservationForm.classList.add("hide");
+//     reservationStatus.classList.remove("hide");
+//     console.log("Hid reservation form, showed status box");
   
-    buildReservationConfirmation();
-  }
+//     buildReservationConfirmation();
+//   }
   
-  function buildReservationConfirmation() {
-    let reservation = JSON.parse(sesStor.getItem("reservation"));
-    console.log("Value of JSON parsed from session storage: ");
-    console.log(reservation);
+//   function buildReservationConfirmation() {
+//     let reservation = JSON.parse(sesStor.getItem("reservation"));
+//     console.log("Value of JSON parsed from session storage: ");
+//     console.log(reservation);
   
-    // build confirmation
-    let reservedRoomType;
-    switch (reservation.roomType) {
-      case "bed1":
-        reservedRoomType = "One King Bed, Regular room";
-        break;
-      case "bed2":
-        reservedRoomType = "Two Queen Beds, Regular room";
-        break;
-      case "suite1":
-        reservedRoomType = "One Queen Bed, Suite with Kitchenette";
-        break;
-      case "suite2":
-        reservedRoomType = "One King Bed, Suite with Kitchenette";
-        break;
-    }
-    console.log(`Reserved room type: ${reservedRoomType}`);
+//     // build confirmation
+//     let reservedRoomType;
+//     switch (reservation.roomType) {
+//       case "bed1":
+//         reservedRoomType = "One King Bed, Regular room";
+//         break;
+//       case "bed2":
+//         reservedRoomType = "Two Queen Beds, Regular room";
+//         break;
+//       case "suite1":
+//         reservedRoomType = "One Queen Bed, Suite with Kitchenette";
+//         break;
+//       case "suite2":
+//         reservedRoomType = "One King Bed, Suite with Kitchenette";
+//         break;
+//     }
+//     console.log(`Reserved room type: ${reservedRoomType}`);
   
-    $("#conf-name").innerHTML = "Name: " + reservation.firstName + " " + reservation.lastName;
-    $("#conf-email-address").innerHTML = "Email Address: " + reservation.emailAddress;
-    $("#conf-phone-number").innerHTML = "Phone Number: " + reservation.phoneNumber;
-    $("#conf-country-state").innerHTML = "Country and State: " + reservation.state + ", " + reservation.country;
-    $("#conf-location").innerHTML = "Hotel Location: " + reservation.location;
-    $("#conf-check-in").innerHTML = "Check-in Date: " + reservation.checkInDate;
-    $("#conf-check-out").innerHTML ="Check-out Date: " + reservation.checkOutDate;
-    $("#conf-room-type").innerHTML = "Room type: " + reservedRoomType;
-    $("#conf-number-of-rooms").innerHTML = "Number of Rooms: " + reservation.numberOfRooms;
+//     $("#conf-name").innerHTML = "Name: " + reservation.firstName + " " + reservation.lastName;
+//     $("#conf-email-address").innerHTML = "Email Address: " + reservation.emailAddress;
+//     $("#conf-phone-number").innerHTML = "Phone Number: " + reservation.phoneNumber;
+//     $("#conf-country-state").innerHTML = "Country and State: " + reservation.state + ", " + reservation.country;
+//     $("#conf-location").innerHTML = "Hotel Location: " + reservation.location;
+//     $("#conf-check-in").innerHTML = "Check-in Date: " + reservation.checkInDate;
+//     $("#conf-check-out").innerHTML ="Check-out Date: " + reservation.checkOutDate;
+//     $("#conf-room-type").innerHTML = "Room type: " + reservedRoomType;
+//     $("#conf-number-of-rooms").innerHTML = "Number of Rooms: " + reservation.numberOfRooms;
   
-    console.log("Set value of reservation confirmation");
+//     console.log("Set value of reservation confirmation");
   
-    reservationStatus.classList.add("hide");
-    reservationConfirmation.classList.remove("hide");
+//     reservationStatus.classList.add("hide");
+//     reservationConfirmation.classList.remove("hide");
   
-    console.log("Hid reservation status, showing confirmation.");
+//     console.log("Hid reservation status, showing confirmation.");
   
-  }
+//   }
