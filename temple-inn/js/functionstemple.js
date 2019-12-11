@@ -43,16 +43,26 @@ function fetchTempleData(templeURL){
     let p = data;
 
     // **********  Get the location information  **********
-    let rexburg = p.Rexburg.Dates;
+    let rexburg = p.Rexburg.Dates[2019].December;
     console.log(rexburg);
     // See if it worked, using ticks around the content in the log
-    console.log(`Date info is: ${rexburg}`);
+    let rexburg2020a = p.Rexburg.Dates[2020].January;                   
+    let rexburg2020b = p.Rexburg.Dates[2020].April; 
+    let rexburg2020c = p.Rexburg.Dates[2020].July; 
+    let rexburg2020d = p.Rexburg.Dates[2020].August; 
+    let rexburg2020e = p.Rexburg.Dates[2020].September; 
+    let rexburg2020h = p.Rexburg.Dates[2020].October; 
+    let rexburg2020g = p.Rexburg.Dates[2020].November; 
+    let rexburg2020f = p.Rexburg.Dates[2020].December;
+
+    let rexburgall = 'December 2019:'+rexburg +'<br>'+'January 2020: '+rexburg2020a +'<br>'+ 'April 2020: '+rexburg2020b +'<br>'+  'July 2020: '+rexburg2020c +'<br>'+ 'August 2020: '+rexburg2020d +'<br>'+ 'September 2020: '+rexburg2020e +'<br>' + 'October 2020: '+ rexburg2020h +'<br>'+'November 2020: '+rexburg2020g +'<br>' + 'December 2020: '+rexburg2020f
+    console.log(`Date info is: ${rexburgall}`);
     // Create a JSON object and store it into local storage.
-    const rex = JSON.stringify({rexburg});
-    locStore.setItem("Rexburg", rex);
+    const rex = JSON.stringify({rexburgall});
+    locStore.setItem("Temple Closures", rex);
     // **********  Get the current conditions information  **********
     // As the data is extracted from the JSON, store it into session storage
-    sessStore.setItem("Rexburg",rexburg);
+    sessStore.setItem("Temple Closures",rex);
 
     
   })
