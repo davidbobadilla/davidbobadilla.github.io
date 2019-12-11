@@ -162,7 +162,8 @@ contentContainer.classList.remove("hide");
 statusContainer.setAttribute('class', 'hide'); // hides the status container
 
 
-
+contentContainer.classList.remove("hide1");
+statusContainer.setAttribute('class', 'hide'); // hides the status container
 
 
 
