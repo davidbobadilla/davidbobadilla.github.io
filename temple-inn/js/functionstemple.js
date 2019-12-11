@@ -111,14 +111,14 @@ function fetchTempleData(templeURL){
     let IdahoFalls2020g = p.Idaho-Falls.Dates[2020].November; 
     let IdahoFalls2020f = p.Idaho-Falls.Dates[2020].December;
 
-    let TempleClosures = 'December 2019:'+IdahoFalls +'<br>'+'January 2020: '+IdahoFalls2020a +'<br>'+ 'February 2020: '+IdahoFalls2020b +'<br>'+  'July 2020: '+IdahoFalls2020c +'<br>'+ 'August 2020: '+IdahoFalls2020d +'<br>'+ 'September 2020: '+IdahoFalls2020e +'<br>' + 'October 2020: '+ IdahoFalls2020h  +'<br>'+'November 2020: '+IdahoFalls2020g  +'<br>' + 'December 2020: '+IdahoFalls2020f
+    let TempleClosures1 = 'December 2019:'+IdahoFalls +'<br>'+'January 2020: '+IdahoFalls2020a +'<br>'+ 'February 2020: '+IdahoFalls2020b +'<br>'+  'April 2020: '+IdahoFalls2020c +'<br>'+ 'June 2020: '+IdahoFalls2020d +'<br>'+ 'July 2020: '+IdahoFalls2020e +'<br>' + 'October 2020: '+ IdahoFalls2020h  +'<br>'+'November 2020: '+IdahoFalls2020g  +'<br>' + 'December 2020: '+IdahoFalls2020f
     console.log(`Date info is: ${TempleClosures}`);
     // Create a JSON object and store it into local storage.
-    const rex = JSON.stringify(TempleClosures);
-    locStore.setItem("Temple Closures", rex);
+    const falls = JSON.stringify(TempleClosures1);
+    locStore.setItem("Temple Closures", falls);
     // **********  Get the current conditions information  **********
     // As the data is extracted from the JSON, store it into session storage
-    sessStore.setItem("Temple Closures",rex);
+    sessStore.setItem("Temple Closures",falls);
 
     
   })
@@ -130,7 +130,7 @@ function fetchTempleData(templeURL){
 
  // Get the h1 to display the city location
  let closure1 = document.querySelector('#two');
- closure1.innerHTML = sessStore.getItem('Temple Closures');
+ closure1.innerHTML = sessStore.getItem('Temple Closures1');
 
 
 
