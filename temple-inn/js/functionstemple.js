@@ -83,7 +83,7 @@ function fetchTempleData(templeURL){
 *  Fetch Temple Idaho Falls Data
 ************************************* */
 function fetchTempleData(templeURL){
-  let cityName = 'Idaho Falls'; // The data we want from the weather.json file
+  let cityName = 'Idaho-Falls'; // The data we want from the weather.json file
   fetch(templeURL)
   .then(function(response) {
   if(response.ok){
@@ -99,19 +99,19 @@ function fetchTempleData(templeURL){
     let p = data;
 
     // **********  Get the information from Idaho Falls **********
-    let IdahoFalls = p.['Idaho Falls'].Dates[2019].December;
+    let IdahoFalls = p.Idaho-Falls.Dates[2019].December;
     console.log(IdahoFalls);
     // See if it worked, using ticks around the content in the log
-    let rexburg2020a = p.Rexburg.Dates[2020].January;                   
-    let rexburg2020b = p.Rexburg.Dates[2020].April; 
-    let rexburg2020c = p.Rexburg.Dates[2020].July; 
-    let rexburg2020d = p.Rexburg.Dates[2020].August; 
-    let rexburg2020e = p.Rexburg.Dates[2020].September; 
-    let rexburg2020h = p.Rexburg.Dates[2020].October; 
-    let rexburg2020g = p.Rexburg.Dates[2020].November; 
-    let rexburg2020f = p.Rexburg.Dates[2020].December;
+    let IdahoFalls2020a = p.Idaho-Falls.Dates[2020].January;                   
+    let IdahoFalls2020b = p.Idaho-Falls.Dates[2020].February; 
+    let IdahoFalls2020c = p.Idaho-Falls.Dates[2020].April; 
+    let IdahoFalls2020d = p.Idaho-Falls.Dates[2020].June; 
+    let IdahoFalls2020e = p.Idaho-Falls.Dates[2020].July; 
+    let IdahoFalls2020h = p.Idaho-Falls.Dates[2020].October; 
+    let IdahoFalls2020g = p.Idaho-Falls.Dates[2020].November; 
+    let IdahoFalls2020f = p.Idaho-Falls.Dates[2020].December;
 
-    let TempleClosures = 'December 2019:'+rexburg +'<br>'+'January 2020: '+rexburg2020a +'<br>'+ 'April 2020: '+rexburg2020b +'<br>'+  'July 2020: '+rexburg2020c +'<br>'+ 'August 2020: '+rexburg2020d +'<br>'+ 'September 2020: '+rexburg2020e +'<br>' + 'October 2020: '+ rexburg2020h +'<br>'+'November 2020: '+rexburg2020g +'<br>' + 'December 2020: '+rexburg2020f
+    let TempleClosures = 'December 2019:'+IdahoFalls +'<br>'+'January 2020: '+IdahoFalls2020a +'<br>'+ 'February 2020: '+IdahoFalls2020b +'<br>'+  'July 2020: '+IdahoFalls2020c +'<br>'+ 'August 2020: '+IdahoFalls2020d +'<br>'+ 'September 2020: '+IdahoFalls2020e +'<br>' + 'October 2020: '+ IdahoFalls2020h  +'<br>'+'November 2020: '+IdahoFalls2020g  +'<br>' + 'December 2020: '+IdahoFalls2020f
     console.log(`Date info is: ${TempleClosures}`);
     // Create a JSON object and store it into local storage.
     const rex = JSON.stringify(TempleClosures);
@@ -129,8 +129,8 @@ function fetchTempleData(templeURL){
 }
 
  // Get the h1 to display the city location
- let closure = document.querySelector('#one');
- closure.innerHTML = sessStore.getItem('Temple Closures');
+ let closure1 = document.querySelector('#two');
+ closure1.innerHTML = sessStore.getItem('Temple Closures');
 
 
 
