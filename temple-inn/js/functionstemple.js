@@ -18,7 +18,9 @@ document.addEventListener("DOMContentLoaded", function(){
 //Get closure json data
 let templeURL = "/temple-inn/newfinished.json";
 fetchTempleData(templeURL);
-
+//Get closure json data
+let templeURL1 = "/temple-inn/newfinished.json";
+fetchTempleData1(templeURL);
 
 })
 
@@ -82,9 +84,9 @@ function fetchTempleData(templeURL){
 /* *************************************
 *  Fetch Temple Idaho Falls Data
 ************************************* */
-function fetchTempleData(templeURL){
-  let cityName = 'Idaho-Falls'; // The data we want from the weather.json file
-  fetch(templeURL)
+function fetchTempleData1(templeURL1){
+  let cityName = 'IdahoFalls'; // The data we want from the weather.json file
+  fetch(templeURL1)
   .then(function(response) {
   if(response.ok){
   return response.json();
@@ -99,26 +101,26 @@ function fetchTempleData(templeURL){
     let p = data;
 
     // **********  Get the information from Idaho Falls **********
-    let IdahoFalls = p.Idaho-Falls.Dates[2019].December;
+    let IdahoFalls = p.IdahoFalls.Dates[2019].December;
     console.log(IdahoFalls);
     // See if it worked, using ticks around the content in the log
-    let IdahoFalls2020a = p.Idaho-Falls.Dates[2020].January;                   
-    let IdahoFalls2020b = p.Idaho-Falls.Dates[2020].February; 
-    let IdahoFalls2020c = p.Idaho-Falls.Dates[2020].April; 
-    let IdahoFalls2020d = p.Idaho-Falls.Dates[2020].June; 
-    let IdahoFalls2020e = p.Idaho-Falls.Dates[2020].July; 
-    let IdahoFalls2020h = p.Idaho-Falls.Dates[2020].October; 
-    let IdahoFalls2020g = p.Idaho-Falls.Dates[2020].November; 
-    let IdahoFalls2020f = p.Idaho-Falls.Dates[2020].December;
+    let IdahoFalls2020a = p.IdahoFalls.Dates[2020].January;                   
+    let IdahoFalls2020b = p.IdahoFalls.Dates[2020].February; 
+    let IdahoFalls2020c = p.IdahoFalls.Dates[2020].April; 
+    let IdahoFalls2020d = p.IdahoFalls.Dates[2020].June; 
+    let IdahoFalls2020e = p.IdahoFalls.Dates[2020].July; 
+    let IdahoFalls2020h = p.IdahoFalls.Dates[2020].October; 
+    let IdahoFalls2020g = p.IdahoFalls.Dates[2020].November; 
+    let IdahoFalls2020f = p.IdahoFalls.Dates[2020].December;
 
     let TempleClosures1 = 'December 2019:'+IdahoFalls +'<br>'+'January 2020: '+IdahoFalls2020a +'<br>'+ 'February 2020: '+IdahoFalls2020b +'<br>'+  'April 2020: '+IdahoFalls2020c +'<br>'+ 'June 2020: '+IdahoFalls2020d +'<br>'+ 'July 2020: '+IdahoFalls2020e +'<br>' + 'October 2020: '+ IdahoFalls2020h  +'<br>'+'November 2020: '+IdahoFalls2020g  +'<br>' + 'December 2020: '+IdahoFalls2020f
-    console.log(`Date info is: ${TempleClosures}`);
+    console.log(`Date info is: ${TempleClosures1}`);
     // Create a JSON object and store it into local storage.
     const falls = JSON.stringify(TempleClosures1);
-    locStore.setItem("Temple Closures", falls);
+    locStore.setItem("Temple Closures1", falls);
     // **********  Get the current conditions information  **********
     // As the data is extracted from the JSON, store it into session storage
-    sessStore.setItem("Temple Closures",falls);
+    sessStore.setItem("Temple Closures1",falls);
 
     
   })
