@@ -76,7 +76,8 @@ function fetchTempleData(templeURL){
  let closure = document.querySelector('#one');
  closure.innerHTML = sessStore.getItem('Temple Closures');
 
-
+ 
+//************************************************************************ */
 
 
 
