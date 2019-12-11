@@ -24,7 +24,7 @@ fetchTempleData(templeURL);
 
 
 /* *************************************
-*  Fetch Temple Data
+*  Fetch Temple Rexburg Data
 ************************************* */
 function fetchTempleData(templeURL){
   let cityName = 'Rexburg'; // The data we want from the weather.json file
@@ -42,7 +42,7 @@ function fetchTempleData(templeURL){
     // shorten the variable and focus only on the data we want to reduce typing
     let p = data;
 
-    // **********  Get the location information  **********
+    // **********  Get the information from Rexburg **********
     let rexburg = p.Rexburg.Dates[2019].December;
     console.log(rexburg);
     // See if it worked, using ticks around the content in the log
