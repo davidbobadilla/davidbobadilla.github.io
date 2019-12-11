@@ -504,13 +504,27 @@ body{
     grid-column: 3/4;
     color: white;
 }
-
-
-
-
-
-
-
+.uno{
+color: aqua;
+}
+.dos{
+    color: blue;
+}
+.tres{
+    color: green;
+}
+.cuatro{
+    color: greenyellow;
+}
+.cinco{
+    color: hotpink;
+}
+.seis{
+    color: yellow
+}
+.siete{
+    color: navajowhite
+}
 
 
 
