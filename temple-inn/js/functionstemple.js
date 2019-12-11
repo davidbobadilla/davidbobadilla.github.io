@@ -3,6 +3,8 @@
 var sessStore = window.sessionStorage;
 // Setup localStorage
 var locStore = window.localStorage;
+var contentContainer = document.querySelector('#one');
+var statusContainer = document.querySelector('#status');
 
 var $ = document.querySelector.bind(document);
 var $$ = document.querySelectorAll.bind(document);
@@ -45,12 +47,7 @@ function fetchTempleData(templeURL){
     console.log(rexburg);
     // See if it worked, using ticks around the content in the log
     console.log(`Date info is: ${rexburg}`);
-    // Get the longitude and latitude and combine them to
-    // // a comma separated single string
-    // const latLong = p.properties.relativeLocation.geometry.coordinates[1] + ","+ p.properties.relativeLocation.geometry.coordinates[0];
-    // console.log(`The coordinates are: ${latLong}`);
-    // // Create a JSON object containing the full name, latitude and longitude
-    // // and store it into local storage.
+    // Create a JSON object and store it into local storage.
     const rex = JSON.stringify({rexburg});
     locStore.setItem("Rexburg", rex);
     // **********  Get the current conditions information  **********
@@ -65,6 +62,9 @@ function fetchTempleData(templeURL){
   })
 }
 
+ // Get the h1 to display the city location
+ let closure = document.querySelector('#one');
+ closure.innerHTML = sessStore.getItem('Rexburg');
 
 
 
@@ -72,8 +72,10 @@ function fetchTempleData(templeURL){
 
 
 
-
-
+// Change the status of the containers
+// contentContainer.setAttribute('class', ''); // removes the hide class from main
+contentContainer.classList.remove("hide");
+statusContainer.setAttribute('class', 'hide'); // hides the status container
 
 
 
