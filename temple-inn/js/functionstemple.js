@@ -76,13 +76,84 @@ function fetchTempleData(templeURL){
  let closure = document.querySelector('#one');
  closure.innerHTML = sessStore.getItem('Temple Closures');
 
- 
+
 //************************************************************************ */
 
+/* *************************************
+*  Fetch Temple Idaho Falls Data
+************************************* */
+function fetchTempleData(templeURL){
+  let cityName = 'Idaho Falls'; // The data we want from the weather.json file
+  fetch(templeURL)
+  .then(function(response) {
+  if(response.ok){
+  return response.json();
+  }
+  throw new ERROR('Network response was not OK.');
+  })
+  .then(function(data){
+    // Check the data object that was retrieved
+    console.log(data);
+    // data is the full JavaScript object, but we only want the preston part
+    // shorten the variable and focus only on the data we want to reduce typing
+    let p = data;
+
+    // **********  Get the information from Idaho Falls **********
+    let IdahoFalls = p.['Idaho Falls'].Dates[2019].December;
+    console.log(IdahoFalls);
+    // See if it worked, using ticks around the content in the log
+    let rexburg2020a = p.Rexburg.Dates[2020].January;                   
+    let rexburg2020b = p.Rexburg.Dates[2020].April; 
+    let rexburg2020c = p.Rexburg.Dates[2020].July; 
+    let rexburg2020d = p.Rexburg.Dates[2020].August; 
+    let rexburg2020e = p.Rexburg.Dates[2020].September; 
+    let rexburg2020h = p.Rexburg.Dates[2020].October; 
+    let rexburg2020g = p.Rexburg.Dates[2020].November; 
+    let rexburg2020f = p.Rexburg.Dates[2020].December;
+
+    let TempleClosures = 'December 2019:'+rexburg +'<br>'+'January 2020: '+rexburg2020a +'<br>'+ 'April 2020: '+rexburg2020b +'<br>'+  'July 2020: '+rexburg2020c +'<br>'+ 'August 2020: '+rexburg2020d +'<br>'+ 'September 2020: '+rexburg2020e +'<br>' + 'October 2020: '+ rexburg2020h +'<br>'+'November 2020: '+rexburg2020g +'<br>' + 'December 2020: '+rexburg2020f
+    console.log(`Date info is: ${TempleClosures}`);
+    // Create a JSON object and store it into local storage.
+    const rex = JSON.stringify(TempleClosures);
+    locStore.setItem("Temple Closures", rex);
+    // **********  Get the current conditions information  **********
+    // As the data is extracted from the JSON, store it into session storage
+    sessStore.setItem("Temple Closures",rex);
+
+    
+  })
+  .catch(function(error){
+  console.log('There was a fetch problem: ', error.message);
+  statusContainer.innerHTML = 'Sorry, the data could not be processed.';
+  })
+}
+
+ // Get the h1 to display the city location
+ let closure = document.querySelector('#one');
+ closure.innerHTML = sessStore.getItem('Temple Closures');
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//************************************************************************** */
 // Change the status of the containers
 // contentContainer.setAttribute('class', ''); // removes the hide class from main
 contentContainer.classList.remove("hide");
