@@ -9,6 +9,125 @@ var $$ = document.querySelectorAll.bind(document);
 
 
 
+
+
+document.addEventListener("DOMContentLoaded", function(){
+
+//Get closure json data
+let templeURL = "/temple-inn/jasonfinished.json";
+fetchTempleData(templeURL);
+
+
+})
+
+
+/* *************************************
+*  Fetch Temple Data
+************************************* */
+function fetchTempleData(templeURL){
+  let cityName = 'Rexburg'; // The data we want from the weather.json file
+  fetch(templeURL)
+  .then(function(response) {
+  if(response.ok){
+  return response.json();
+  }
+  throw new ERROR('Network response was not OK.');
+  })
+  .then(function(data){
+    // Check the data object that was retrieved
+    console.log(data);
+    // data is the full JavaScript object, but we only want the preston part
+    // shorten the variable and focus only on the data we want to reduce typing
+    let p = data;
+
+    // **********  Get the location information  **********
+    let rexburg = p.Rexburg.December;
+    console.log(rexburg);
+    let locState = p.properties.relativeLocation.properties.state;
+    // Put them together
+    let fullName = locName+', '+locState;
+    // See if it worked, using ticks around the content in the log
+    console.log(`fullName is: ${fullName}`);
+    // Get the longitude and latitude and combine them to
+    // a comma separated single string
+    const latLong = p.properties.relativeLocation.geometry.coordinates[1] + ","+ p.properties.relativeLocation.geometry.coordinates[0];
+    console.log(`The coordinates are: ${latLong}`);
+    // Create a JSON object containing the full name, latitude and longitude
+    // and store it into local storage.
+    const prestonData = JSON.stringify({fullName,latLong});
+    locStore.setItem("Preston,ID", prestonData);
+    // **********  Get the current conditions information  **********
+    // As the data is extracted from the JSON, store it into session storage
+    sessStore.setItem("fullName",fullName);
+    sessStore.setItem("latLong",latLong);
+    // Get the temperature data
+    const tempera = p.properties.relativeLocation.properties.temperature;
+    sessStore.setItem("temperature",tempera);
+    console.log(`Temperature is: ${tempera}`);
+
+    // Get the wind data 
+    const windSpeed = p.properties.relativeLocation.properties.windSpeed;
+    sessStore.setItem("WindSpeed",windSpeed);
+    console.log(`The Windspeed is: ${windSpeed}`);
+
+    // Get wind Gust data
+    const windGust = p.properties.relativeLocation.properties.windGust;
+    sessStore.setItem("WindGust", windGust);
+    console.log(`The Wind Gust is: ${windGust}`);
+
+    //Get high temperature
+    const highTemp = p.properties.relativeLocation.properties.highTemp;
+    sessStore.setItem("highTemp",highTemp);
+    console.log(`The high temperature is: ${highTemp}`);
+
+    //Get low temperature
+    const lowTemp = p.properties.relativeLocation.properties.lowTemp;
+    sessStore.setItem("lowTemp",lowTemp);
+    console.log(`The low temperature is: ${lowTemp}`);
+
+    
+  })
+  .catch(function(error){
+  console.log('There was a fetch problem: ', error.message);
+  statusContainer.innerHTML = 'Sorry, the data could not be processed.';
+  })
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function current() {
     var todaysDate = new Date();
     const longDayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
