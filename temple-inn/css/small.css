@@ -45,8 +45,8 @@ margin-left: 10px;
 }
 .call {
 	position: absolute;
-	top: 310px;
-	right: 120px;
+	top: 430px;
+	right: 170px;
 	background: radial-gradient(#eee, #197996);
 	border: 1px solid #000; 
 	padding: .3rem;
@@ -56,8 +56,8 @@ margin-left: 10px;
 }
 .salt {
 	position: absolute;
-	top: 430px;
-	right:10px;
+	top: 540px;
+	right:100px;
 	background: radial-gradient(#eee, #197996);
 	border: 1px solid #000; 
 	padding: .4rem;
@@ -70,6 +70,7 @@ margin-left: 10px;
   display:flex;
   justify-content: space-evenly;
   background-color: rgb(35, 175, 175);
+  flex-direction: column;
 
 }
 
@@ -91,7 +92,16 @@ li{
   list-style-type: none;
   color: white;
 }
+a:hover {
+  background-color: rgba(29, 62, 151, 0.767);
+}
+a:active {
+  color: rgb(4, 221, 185);
+}
 
+a:visited {
+  color: rgb(255, 255, 255);
+}
 
 
 
