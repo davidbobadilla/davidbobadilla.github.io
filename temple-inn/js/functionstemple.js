@@ -227,22 +227,20 @@ function fetchTempleData3(templeURL3){
     console.log(Provo);
     // See if it worked, using ticks around the content in the log
     let Provo2020a = p.Provo.Dates[2020].January;                   
-    let Provo2020b = p.Provo.Dates[2020].February; 
-    let Provo2020c = p.Provo.Dates[2020].March; 
-    let Provo2020d = p.Provo.Dates[2020].April; 
-    let Provo2020e = p.Provo.Dates[2020].July; 
-    let Provo2020h = p.Provo.Dates[2020].October; 
-    let Provo2020g = p.Provo.Dates[2020].November; 
-    let Provo2020f = p.Provo.Dates[2020].December;
+    let Provo2020b = p.Provo.Dates[2020].April; 
+    let Provo2020c = p.Provo.Dates[2020].July; 
+    let Provo2020d = p.Provo.Dates[2020].October; 
+    let Provo2020e = p.Provo.Dates[2020].November; 
+    let Provo2020h = p.Provo.Dates[2020].December; 
 
-    let TempleClosures3 = 'December 2019:'+Provo +'<br>'+'January 2020: '+Provo2020a +'<br>'+ 'February 2020: '+Provo2020b +'<br>'+  'March 2020: '+Provo2020c +'<br>'+ 'April 2020: '+Provo2020d +'<br>'+ 'July 2020: '+Provo2020e +'<br>' + 'October 2020: '+ Provo2020h  +'<br>'+'November 2020: '+Provo2020g  +'<br>' + 'December 2020: '+Provo2020f
+    let TempleClosures3 = 'December 2019:'+Provo +'<br>'+'January 2020: '+Provo2020a +'<br>'+ 'April 2020: '+Provo2020b +'<br>'+  'July 2020: '+Provo2020c +'<br>'+ 'October 2020: '+Provo2020d +'<br>'+ 'November 2020: '+Provo2020e +'<br>' + 'December 2020: '+ Provo2020h 
     console.log(`Date info is: ${TempleClosures3}`);
     // Create a JSON object and store it into local storage.
-    const Provo = JSON.stringify(TempleClosures3);
-    locStore.setItem("Temple Closures3", Provo);
+    const pro = JSON.stringify(TempleClosures3);
+    locStore.setItem("Temple Closures3", pro);
     // **********  Get the current conditions information  **********
     // As the data is extracted from the JSON, store it into session storage
-    sessStore.setItem("Temple Closures3",Provo);
+    sessStore.setItem("Temple Closures3",pro);
 
     
   })
