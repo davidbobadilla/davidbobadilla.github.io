@@ -55,7 +55,10 @@ a:hover {
  a:active {
     color: rgb(4, 221, 185);
   }
-
+  
+  a:visited {
+    color: rgb(223, 236, 236);
+  }
   .navegacion{
     display:flex;
     justify-content: space-evenly;
@@ -539,7 +542,8 @@ color: aqua;
     color: rgb(97, 240, 69);
 }
 .seis{
-    color: rgb(58, 211, 216)
+    color: rgb(58, 211, 216);
+    
 }
 .siete{
     color: navajowhite
