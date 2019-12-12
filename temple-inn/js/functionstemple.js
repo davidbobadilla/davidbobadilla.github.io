@@ -18,10 +18,14 @@ document.addEventListener("DOMContentLoaded", function(){
 //Get closure json data
 let templeURL = "/temple-inn/newfinished.json";
 fetchTempleData(templeURL);
-//Get closure json data
+
+//Get closure1 json data
 let templeURL1 = "/temple-inn/newfinished.json";
 fetchTempleData1(templeURL);
 
+//Get closure2 json data
+let templeURL2 = "/temple-inn/newfinished.json";
+fetchTempleData2(templeURL);
 })
 
 
@@ -134,10 +138,63 @@ function fetchTempleData1(templeURL1){
  let closure1 = document.querySelector('#two');
  closure1.innerHTML = sessStore.getItem('Temple Closures1');
 
+//************************************************************************ */
 
 
 
 
+/* *************************************
+*  Fetch Temple Los Angeles Data
+************************************* */
+function fetchTempleData2(templeURL2){
+  let cityName = 'LosAngeles'; // The data we want from the weather.json file
+  fetch(templeURL2)
+  .then(function(response) {
+  if(response.ok){
+  return response.json();
+  }
+  throw new ERROR('Network response was not OK.');
+  })
+  .then(function(data){
+    // Check the data object that was retrieved
+    console.log(data);
+    // data is the full JavaScript object, but we only want the preston part
+    // shorten the variable and focus only on the data we want to reduce typing
+    let p = data;
+
+    // **********  Get the information from Idaho Falls **********
+    let LosAngeles = p.LosAngeles.Dates[2019].December;
+    console.log(IdahoFalls);
+    // See if it worked, using ticks around the content in the log
+    let LosAngeles2020a = p.LosAngeles.Dates[2020].January;                   
+    let LosAngeles2020b = p.LosAngeles.Dates[2020].February; 
+    let LosAngeles2020c = p.LosAngeles.Dates[2020].March; 
+    let LosAngeles2020d = p.LosAngeles.Dates[2020].April; 
+    let LosAngeles2020e = p.LosAngeles.Dates[2020].July; 
+    let LosAngeles2020h = p.LosAngeles.Dates[2020].October; 
+    let LosAngeles2020g = p.LosAngeles.Dates[2020].November; 
+    let LosAngeles2020f = p.LosAngeles.Dates[2020].December;
+
+    let TempleClosures2 = 'December 2019:'+LosAngeles +'<br>'+'January 2020: '+LosAngeles2020a +'<br>'+ 'February 2020: '+LosAngeles2020b +'<br>'+  'March 2020: '+LosAngeles2020c +'<br>'+ 'April 2020: '+LosAngeles2020d +'<br>'+ 'July 2020: '+LosAngeles2020e +'<br>' + 'October 2020: '+ LosAngeles2020h  +'<br>'+'November 2020: '+LosAngeles2020g  +'<br>' + 'December 2020: '+LosAngeles2020f
+    console.log(`Date info is: ${TempleClosures2}`);
+    // Create a JSON object and store it into local storage.
+    const angeles = JSON.stringify(TempleClosures2);
+    locStore.setItem("Temple Closures2", angeles);
+    // **********  Get the current conditions information  **********
+    // As the data is extracted from the JSON, store it into session storage
+    sessStore.setItem("Temple Closures2",angeles);
+
+    
+  })
+  .catch(function(error){
+  console.log('There was a fetch problem: ', error.message);
+  statusContainer.innerHTML = 'Sorry, the data could not be processed.';
+  })
+}
+
+ // Get the h1 to display the city location
+ let closure2 = document.querySelector('#three');
+ closure2.innerHTML = sessStore.getItem('Temple Closures2');
 
 
 
@@ -165,9 +222,11 @@ statusContainer.setAttribute('class', 'hide'); // hides the status container
 contentContainer.classList.remove("hide1");
 statusContainer.setAttribute('class', 'hide'); // hides the status container
 
+contentContainer.classList.remove("hide2");
+statusContainer.setAttribute('class', 'hide'); // hides the status container
 
-
-
+contentContainer.classList.remove("hide3");
+statusContainer.setAttribute('class', 'hide'); // hides the status container
 
 
 
