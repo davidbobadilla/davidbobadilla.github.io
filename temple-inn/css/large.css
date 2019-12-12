@@ -50,6 +50,9 @@ li{
     list-style-type: none;
     color: white;
 }
+.bla{
+    color: black;
+  }
 
 a:hover {
     background-color: rgba(29, 62, 151, 0.767);
