@@ -527,19 +527,19 @@ body{
 color: aqua;
 }
 .dos{
-    color: blue;
+    color: rgb(235, 231, 34);
 }
 .tres{
-    color: green;
+    color: rgb(75, 230, 75);
 }
 .cuatro{
-    color: greenyellow;
+    color: rgb(240, 195, 166);
 }
 .cinco{
-    color: hotpink;
+    color: rgb(97, 240, 69);
 }
 .seis{
-    color: yellow
+    color: rgb(58, 211, 216)
 }
 .siete{
     color: navajowhite
