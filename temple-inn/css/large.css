@@ -34,7 +34,7 @@
 
 ul li a{
     flex-direction: row;
-    color:white;
+    color:rgb(255, 255, 255);
     margin: 1px;
     padding:3px;
     font-size: 18px;
@@ -61,6 +61,7 @@ a:hover {
   a:visited {
     color: rgb(255, 255, 255);
   }
+  
   .navegacion{
     display:flex;
     justify-content: space-evenly;
