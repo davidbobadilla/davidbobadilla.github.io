@@ -26,6 +26,10 @@ fetchTempleData1(templeURL1);
 //Get closure2 json data
 let templeURL2 = "/temple-inn/newfinished.json";
 fetchTempleData2(templeURL2);
+
+//Get closure3 json data
+let templeURL3 = "/temple-inn/newfinished.json";
+fetchTempleData3(templeURL3);
 })
 
 
@@ -196,10 +200,61 @@ function fetchTempleData2(templeURL2){
  let closure2 = document.querySelector('#three');
  closure2.innerHTML = sessStore.getItem('Temple Closures2');
 
+//************************************************************************** */
 
 
+/* *************************************
+*  Fetch Temple Los Angeles Data
+************************************* */
+function fetchTempleData3(templeURL3){
+  let cityName = 'Provo'; // The data we want from the weather.json file
+  fetch(templeURL3)
+  .then(function(response) {
+  if(response.ok){
+  return response.json();
+  }
+  throw new ERROR('Network response was not OK.');
+  })
+  .then(function(data){
+    // Check the data object that was retrieved
+    console.log(data);
+    // data is the full JavaScript object, but we only want the preston part
+    // shorten the variable and focus only on the data we want to reduce typing
+    let p = data;
 
+    // **********  Get the information from Idaho Falls **********
+    let Provo = p.Provo.Dates[2019].December;
+    console.log(Provo);
+    // See if it worked, using ticks around the content in the log
+    let Provo2020a = p.Provo.Dates[2020].January;                   
+    let Provo2020b = p.Provo.Dates[2020].February; 
+    let Provo2020c = p.Provo.Dates[2020].March; 
+    let Provo2020d = p.Provo.Dates[2020].April; 
+    let Provo2020e = p.Provo.Dates[2020].July; 
+    let Provo2020h = p.Provo.Dates[2020].October; 
+    let Provo2020g = p.Provo.Dates[2020].November; 
+    let Provo2020f = p.Provo.Dates[2020].December;
 
+    let TempleClosures3 = 'December 2019:'+Provo +'<br>'+'January 2020: '+Provo2020a +'<br>'+ 'February 2020: '+Provo2020b +'<br>'+  'March 2020: '+Provo2020c +'<br>'+ 'April 2020: '+Provo2020d +'<br>'+ 'July 2020: '+Provo2020e +'<br>' + 'October 2020: '+ Provo2020h  +'<br>'+'November 2020: '+Provo2020g  +'<br>' + 'December 2020: '+Provo2020f
+    console.log(`Date info is: ${TempleClosures3}`);
+    // Create a JSON object and store it into local storage.
+    const Provo = JSON.stringify(TempleClosures3);
+    locStore.setItem("Temple Closures3", Provo);
+    // **********  Get the current conditions information  **********
+    // As the data is extracted from the JSON, store it into session storage
+    sessStore.setItem("Temple Closures3",Provo);
+
+    
+  })
+  .catch(function(error){
+  console.log('There was a fetch problem: ', error.message);
+  statusContainer.innerHTML = 'Sorry, the data could not be processed.';
+  })
+}
+
+ // Get the h1 to display the city location
+ let closure3 = document.querySelector('#four');
+ closure3.innerHTML = sessStore.getItem('Temple Closures3');
 
 
 
