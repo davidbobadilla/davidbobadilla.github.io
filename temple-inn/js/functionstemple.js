@@ -405,14 +405,14 @@ window.onload = copyright();
 // $("#reservation-form").addEventListener('submit', function(event){event.preventDefault();});
 
 // function getContactFormData() {
-//     let fullName = $("#full-name");
+//     let fullName = $("#fname");
 //     let emailAddress = $("#email-address");
 //     let subject = $("#subject");
 //     let message = $("#message");
-//     sesStor.setItem("contact-fullName", fullName.value);
-//     sesStor.setItem("contact-emailAddress", emailAddress.value);
-//     sesStor.setItem("contact-subject", subject.value);
-//     sesStor.setItem("contact-message", message.value);
+//     sesStore.setItem("contact-fullName", fullName.value);
+//     sesStore.setItem("contact-emailAddress", emailAddress.value);
+//     sesStore.setItem("contact-subject", subject.value);
+//     sesStore.setItem("contact-message", message.value);
 //     console.log(`getContactFormData(): Successfully stored the contact form data into session storage.`);
 //   }
   
@@ -433,7 +433,7 @@ window.onload = copyright();
 //     console.log(`Value of reservation object:`);
 //     console.log(reservation);
   
-//     sesStor.setItem("reservation", JSON.stringify(reservation)); // store to session storage
+//     sesStore.setItem("reservation", JSON.stringify(reservation)); // store to session storage
 //     // document.forms[0].reset; // reset form
 //     // console.log("Reset form");
   
@@ -449,23 +449,6 @@ window.onload = copyright();
 //     console.log("Value of JSON parsed from session storage: ");
 //     console.log(reservation);
   
-//     // build confirmation
-//     let reservedRoomType;
-//     switch (reservation.roomType) {
-//       case "bed1":
-//         reservedRoomType = "One King Bed, Regular room";
-//         break;
-//       case "bed2":
-//         reservedRoomType = "Two Queen Beds, Regular room";
-//         break;
-//       case "suite1":
-//         reservedRoomType = "One Queen Bed, Suite with Kitchenette";
-//         break;
-//       case "suite2":
-//         reservedRoomType = "One King Bed, Suite with Kitchenette";
-//         break;
-//     }
-//     console.log(`Reserved room type: ${reservedRoomType}`);
   
 //     $("#conf-name").innerHTML = "Name: " + reservation.firstName + " " + reservation.lastName;
 //     $("#conf-email-address").innerHTML = "Email Address: " + reservation.emailAddress;
