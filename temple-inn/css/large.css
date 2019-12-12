@@ -20,7 +20,7 @@
 }
 
 
-    .logobox {
+.logobox {
     display: flex;
     flex: 1;
     background-color:rgb(44, 107, 202);
