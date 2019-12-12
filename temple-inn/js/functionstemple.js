@@ -21,11 +21,11 @@ fetchTempleData(templeURL);
 
 //Get closure1 json data
 let templeURL1 = "/temple-inn/newfinished.json";
-fetchTempleData1(templeURL);
+fetchTempleData1(templeURL1);
 
 //Get closure2 json data
 let templeURL2 = "/temple-inn/newfinished.json";
-fetchTempleData2(templeURL);
+fetchTempleData2(templeURL2);
 })
 
 
@@ -164,7 +164,7 @@ function fetchTempleData2(templeURL2){
 
     // **********  Get the information from Idaho Falls **********
     let LosAngeles = p.LosAngeles.Dates[2019].December;
-    console.log(IdahoFalls);
+    console.log(LosAngeles);
     // See if it worked, using ticks around the content in the log
     let LosAngeles2020a = p.LosAngeles.Dates[2020].January;                   
     let LosAngeles2020b = p.LosAngeles.Dates[2020].February; 
