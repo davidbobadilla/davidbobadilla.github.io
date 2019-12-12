@@ -43,10 +43,12 @@ ul li a{
 }
 ul li{
   font-size: 40px;
+  color: white;
 }
 
 li{
     list-style-type: none;
+    color: white;
 }
 
 a:hover {
@@ -57,7 +59,7 @@ a:hover {
   }
   
   a:visited {
-    color: rgb(223, 236, 236);
+    color: rgb(255, 255, 255);
   }
   .navegacion{
     display:flex;
