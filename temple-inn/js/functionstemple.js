@@ -32,6 +32,7 @@ fetchTempleData2(templeURL2);
 //Get closure3 json data
 let templeURL3 = "/temple-inn/newfinished.json";
 fetchTempleData3(templeURL3);
+buildReservationConfirmation();
 })
 
 
@@ -369,8 +370,8 @@ function buildReservationConfirmation() {
 
   console.log("Set value of reservation confirmation");
 
-  reservationStatus.classList.add("hide4");
-  reservationConfirmation.classList.remove("hide");
+  // reservationStatus.classList.add("hide4");
+  // reservationConfirmation.classList.remove("hide");
 
   console.log("Hid reservation status, showing confirmation.");
 }
