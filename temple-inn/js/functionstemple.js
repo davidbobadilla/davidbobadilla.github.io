@@ -282,7 +282,8 @@ contentContainer.classList.remove("hide3");
 statusContainer.setAttribute('class', 'hide'); // hides the status container
 
 
-
+contentContainer.classList.remove("hide4");
+statusContainer.setAttribute('class', 'hide'); // hides the status container
 
 
 
@@ -317,6 +318,78 @@ function copyright() {
 
 window.onload = current();
 window.onload = copyright();
+
+
+
+
+
+
+
+
+function processReservationData() {
+  let reservation = {
+    firstName: $("#res-first-name").value,
+    lastName: $("#res-last-name").value,
+    emailAddress: $("#res-email-address").value,
+    phoneNumber: $("#res-phone-number").value,
+    location: $("#res-location").value,
+    guest: $("#res-location").value,
+    checkInDate: $("#res-check-in-date").value,
+    checkOutDate: $("#res-check-out-date").value,
+    additionalComments: $("#res-additional-comments").value,
+    
+    
+    
+    
+    
+    
+  }
+  console.log(`Value of reservation object:`);
+  console.log(reservation);
+
+  sesStor.setItem("reservation", JSON.stringify(reservation)); // store to session storage
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
