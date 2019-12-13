@@ -279,6 +279,60 @@ border: 1px solid #000;
   margin: 30px;
 }
 
+#rs{
+
+  display: block;
+  height: 60px;
+  width: 170px;
+  line-height: 60px;
+  -moz-border-radius: 30px; /* or 50% */
+  border-radius: 30px; /* or 50% */
+  background-color: rgb(12, 188, 211);
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  margin: 9px;
+  
+}
+
+#recep{
+  color:white;
+  background-color: rgb(44, 107, 202);
+  margin: 10px;
+  font-size: 20px;
+  font-family: cursive;
+}
+#recep1{
+  color:white;
+  background-color: rgb(44, 107, 202);
+  margin: 10px;
+  font-size: 20px;
+  font-family: cursive;
+}
+.everything4{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  background-color: rgb(0, 0, 0);
+}
+#banquet {
+  max-width: 200px;
+}
+#banquet1 {
+  max-width: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
