@@ -32,6 +32,8 @@ fetchTempleData2(templeURL2);
 //Get closure3 json data
 let templeURL3 = "/temple-inn/newfinished.json";
 fetchTempleData3(templeURL3);
+
+processReservationData();
 buildReservationConfirmation();
 })
 
