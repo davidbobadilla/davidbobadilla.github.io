@@ -338,16 +338,11 @@ function processReservationData() {
     checkOutDate: $("#resDate1").value,
     additionalComments: $("#subject1").value,
     
-    
-    
-    
-    
-    
   }
   console.log(`Value of reservation object:`);
   console.log(reservation);
 
-  sesStor.setItem("reservation", JSON.stringify(reservation)); // store to session storage
+  sessStore.setItem("reservation", JSON.stringify(reservation)); // store to session storage
 }
 
 
