@@ -381,8 +381,15 @@ border: 1px solid #000;
   font-size: 30px;
 }
 
-
-
+#resResult{
+  color:rgb(6, 57, 128);
+}
+.everything7{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  background-color: rgb(0, 0, 0);
+}
 
 
 
