@@ -349,6 +349,9 @@ function processReservationData() {
 
 
 
+
+
+
 function buildReservationConfirmation() {
   let reservation = JSON.parse(sessStore.getItem("reservation"));
   console.log("Value of JSON parsed from session storage: ");
@@ -370,6 +373,7 @@ function buildReservationConfirmation() {
   reservationConfirmation.classList.remove("hide");
 
   console.log("Hid reservation status, showing confirmation.");
+}
 
 
 
@@ -559,4 +563,3 @@ function buildReservationConfirmation() {
 //     console.log("Hid reservation status, showing confirmation.");
   
 //   
-}
