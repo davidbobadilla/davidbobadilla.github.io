@@ -141,9 +141,26 @@ a:visited {
       color: navajowhite
   }
 
+  .info1{
+    background: radial-gradient(rgb(12, 1, 75), #197996);
+	border: 1px solid #000; 
+	padding: 1.5rem;
+	box-shadow: 0 0 30px #111;
+    opacity: .99;
+    font-size: 16px;
+    margin:10px;
+}
 
-
-
+.info{
+  background: radial-gradient(rgb(12, 1, 75), #01678f);
+border: 1px solid #000; 
+padding: 1.5rem;
+box-shadow: 0 0 30px #111;
+  opacity: .99;
+  font-size: 16px;
+  margin:10px;
+  
+}
 
 
 
