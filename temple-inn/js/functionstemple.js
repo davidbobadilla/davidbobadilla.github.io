@@ -348,6 +348,7 @@ function processReservationData() {
 
 // store to session storage
   sessStore.setItem("reservation", JSON.stringify(reservation)); 
+  buildReservationConfirmation()
   
 }
 
