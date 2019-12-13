@@ -9,6 +9,8 @@ var statusContainer = document.querySelector('#status');
 var $ = document.querySelector.bind(document);
 var $$ = document.querySelectorAll.bind(document);
 
+var reservationStatus = $("#reservation-status");
+var reservationConfirmation = $("#reservation-confirmation");
 
 
 
@@ -364,8 +366,8 @@ function buildReservationConfirmation() {
 
   console.log("Set value of reservation confirmation");
 
-  reservationStatus.classList.add("hide");
-  reservationConfirmation.classList.remove("hide");
+  reservationStatus.classList.add("hide4");
+  reservationConfirmation.classList.remove("hide5");
 
   console.log("Hid reservation status, showing confirmation.");
 
