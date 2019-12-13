@@ -182,15 +182,17 @@ a:hover {
 
 }
 #ret{
-    position: absolute;
-	top: 600px;
-	right:900px;
-	background: radial-gradient(#eee, #197996);
-	border: 1px solid #000; 
-	padding: 1.5rem;
-	box-shadow: 0 0 30px #111;
-    opacity: .99;
-    font-size: 16px;  
+    display: block;
+    height: 60px;
+    width: 170px;
+    line-height: 60px;
+    -moz-border-radius: 30px; /* or 50% */
+    border-radius: 30px; /* or 50% */
+    background-color: rgb(12, 188, 211);
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    margin: 9px;
 }
 .servicio{
     color: rgb(255, 255, 255);
