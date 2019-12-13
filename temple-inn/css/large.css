@@ -526,8 +526,8 @@ body{
 #re{
     color:white;
     position: relative;
-    left: -500px;
-    top:150px;
+    left: 100px;
+    top:30px;
 }
 .foto5{
     max-width: 500px;
