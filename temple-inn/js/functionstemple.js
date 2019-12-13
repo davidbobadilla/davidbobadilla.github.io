@@ -346,7 +346,8 @@ function processReservationData() {
   console.log(`Value of reservation object:`);
   console.log(reservation);
 
-  sessStore.setItem("reservation", JSON.stringify(reservation)); // store to session storage
+// store to session storage
+  sessStore.setItem("reservation", JSON.stringify(reservation)); 
   
 }
 
@@ -356,7 +357,7 @@ function processReservationData() {
 
 
 function buildReservationConfirmation() {
-  let reservation = JSON.parse(sessStore.getItem("reservation"));
+  let reservation = JSON.parse(sessStore.getItem(reservation));
   console.log("Value of JSON parsed from session storage: ");
   console.log(reservation);
 
@@ -370,12 +371,8 @@ function buildReservationConfirmation() {
   $("#resDate1").innerHTML ="Check-out Date: " + reservation.checkOutDate;
   $("#subject1").innerHTML = "Additional Comments: " + reservation.additionalComments;
 
-  console.log("Set value of reservation confirmation");
 
-  // reservationStatus.classList.add("hide4");
-  // reservationConfirmation.classList.remove("hide");
 
-  console.log("Hid reservation status, showing confirmation.");
 }
 
 
