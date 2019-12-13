@@ -328,15 +328,15 @@ window.onload = copyright();
 
 function processReservationData() {
   let reservation = {
-    firstName: $("#res-first-name").value,
-    lastName: $("#res-last-name").value,
-    emailAddress: $("#res-email-address").value,
-    phoneNumber: $("#res-phone-number").value,
-    location: $("#res-location").value,
-    guest: $("#res-location").value,
-    checkInDate: $("#res-check-in-date").value,
-    checkOutDate: $("#res-check-out-date").value,
-    additionalComments: $("#res-additional-comments").value,
+    firstName: $("#fname").value,
+    lastName: $("#lname").value,
+    emailAddress: $("#Email").value,
+    phoneNumber: $("#phone").value,
+    location: $("#city").value,
+    guest: $("#guests").value,
+    checkInDate: $("#resDate").value,
+    checkOutDate: $("#resDate1").value,
+    additionalComments: $("#subject1").value,
     
     
     
