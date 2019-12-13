@@ -106,11 +106,40 @@ a:visited {
   color: rgb(255, 255, 255);
 }
 
+.foto5{
+  max-width: 334px;
+  margin:8px;
+}
 
+.everything6{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  background-color: rgb(0, 0, 0);
+}
 
-
-
-
+.uno{
+  color: aqua;
+  }
+  .dos{
+      color: rgb(235, 231, 34);
+  }
+  .tres{
+      color: rgb(75, 230, 75);
+  }
+  .cuatro{
+      color: rgb(240, 195, 166);
+  }
+  .cinco{
+      color: rgb(97, 240, 69);
+  }
+  .seis{
+      color: rgb(58, 211, 216);
+      
+  }
+  .siete{
+      color: navajowhite
+  }
 
 
 
