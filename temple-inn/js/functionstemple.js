@@ -353,6 +353,23 @@ function buildReservationConfirmation() {
   console.log(reservation);
 
 
+  $("#fname").innerHTML = "Name: " + reservation.firstName + " " + reservation.lastName;
+  $("#Email").innerHTML = "Email Address: " + reservation.emailAddress;
+  $("#phone").innerHTML = "Phone Number: " + reservation.phoneNumber;
+  $("#city").innerHTML = "City and State: " + reservation.location ;
+  $("#guests").innerHTML = "# of Guest: " + reservation.guest ;
+  $("#resDate").innerHTML = "Check-in Date: " + reservation.checkInDate;
+  $("#resDate1").innerHTML ="Check-out Date: " + reservation.checkOutDate;
+  $("#subject1").innerHTML = "Additional Comments: " + reservation.additionalComments;
+
+  console.log("Set value of reservation confirmation");
+
+  reservationStatus.classList.add("hide");
+  reservationConfirmation.classList.remove("hide");
+
+  console.log("Hid reservation status, showing confirmation.");
+
+
 
 
 
