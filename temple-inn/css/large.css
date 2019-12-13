@@ -114,6 +114,12 @@ a:hover {
     grid-template-rows: 1fr;
     background-color: rgb(0, 0, 0);
 }
+.everything7{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    background-color: rgb(0, 0, 0);
+}
 #foto{
     width: 100%;
     grid-column: 2/5;
@@ -175,7 +181,17 @@ a:hover {
     margin: 9px;
 
 }
-    
+#ret{
+    position: absolute;
+	top: 600px;
+	right:900px;
+	background: radial-gradient(#eee, #197996);
+	border: 1px solid #000; 
+	padding: 1.5rem;
+	box-shadow: 0 0 30px #111;
+    opacity: .99;
+    font-size: 16px;  
+}
 .servicio{
     color: rgb(255, 255, 255);
 	background: radial-gradient(rgb(5, 134, 134), #197996);
