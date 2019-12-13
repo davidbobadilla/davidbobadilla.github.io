@@ -322,13 +322,39 @@ border: 1px solid #000;
   max-width: 200px;
 }
 
+#mish {
+  margin:15px;
+  background-color: rgb(8, 151, 167);
+}
+#misional{
+  font-size:18px;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
 
-
-
-
-
-
-
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.column {
+  flex: 50%;
+  max-width: 100%;
+  padding: 0 4px;
+  
+}
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+.container1{
+  
+      border-radius: 5px;
+      background-color: #1d51a4;
+      padding: 20px;
+    
+}
 
 
 
