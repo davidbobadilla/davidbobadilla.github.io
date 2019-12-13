@@ -262,9 +262,22 @@ border: 1px solid #000;
   font-family: sans-serif;
 }
 
+#foto2{
+  width:200px;
+  margin:13px;
+  
+}
+#foto3{
+  width:200px;
+  margin:13px;
+  
+}
 
-
-
+.rec{
+  width: 200px;
+  height: 200px;
+  margin: 30px;
+}
 
 
 
