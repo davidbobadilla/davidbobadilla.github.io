@@ -367,7 +367,7 @@ function buildReservationConfirmation() {
   console.log("Set value of reservation confirmation");
 
   reservationStatus.classList.add("hide4");
-  reservationConfirmation.classList.remove("hide5");
+  reservationConfirmation.classList.remove("hide");
 
   console.log("Hid reservation status, showing confirmation.");
 
