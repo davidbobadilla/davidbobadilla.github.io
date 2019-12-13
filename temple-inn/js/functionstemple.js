@@ -33,8 +33,7 @@ fetchTempleData2(templeURL2);
 let templeURL3 = "/temple-inn/newfinished.json";
 fetchTempleData3(templeURL3);
 
-processReservationData();
-buildReservationConfirmation();
+
 })
 
 
@@ -348,6 +347,7 @@ function processReservationData() {
   console.log(reservation);
 
   sessStore.setItem("reservation", JSON.stringify(reservation)); // store to session storage
+  
 }
 
 
@@ -361,7 +361,7 @@ function buildReservationConfirmation() {
   console.log(reservation);
 
 
-  $("#fname").innerHTML = "Name: " + reservation.firstName + " " + reservation.lastName;
+  $("fname").innerHTML = "Name: " + reservation.firstName + " " + reservation.lastName;
   $("#Email").innerHTML = "Email Address: " + reservation.emailAddress;
   $("#phone").innerHTML = "Phone Number: " + reservation.phoneNumber;
   $("#city").innerHTML = "City and State: " + reservation.location ;
