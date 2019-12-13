@@ -371,7 +371,15 @@ border: 1px solid #000;
 
 }
 
-
+#gracias {
+  color: white;
+  text-align: center;
+  font-size:20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#gracias1 {
+  font-size: 30px;
+}
 
 
 
