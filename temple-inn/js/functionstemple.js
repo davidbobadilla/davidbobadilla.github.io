@@ -82,7 +82,7 @@ function fetchTempleData(templeURL){
   })
 }
 
- // Get the h1 to display the city location
+ 
  let closure = document.querySelector('#one');
  closure.innerHTML = sessStore.getItem('Temple Closures');
 
@@ -347,6 +347,10 @@ function processReservationData() {
 
 
 
+function buildReservationConfirmation() {
+  let reservation = JSON.parse(sessStore.getItem("reservation"));
+  console.log("Value of JSON parsed from session storage: ");
+  console.log(reservation);
 
 
 
@@ -535,4 +539,5 @@ function processReservationData() {
   
 //     console.log("Hid reservation status, showing confirmation.");
   
-//   }
+//   
+}
