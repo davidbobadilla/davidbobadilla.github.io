@@ -68,7 +68,7 @@ a:hover {
   .navegacion{
     display:flex;
     justify-content: space-evenly;
-    background-color: rgb(35, 175, 175);
+    background-color: rgb(14, 83, 83);
 
 }
 
@@ -143,7 +143,7 @@ a:hover {
     width:400px;
     margin-left: 40px;
     color:rgb(235, 245, 238);
-    background-color:rgb(35, 175, 175) ;
+    background-color:rgb(14, 83, 83);
     font-size: 30px;
     align-content: center;
 }
