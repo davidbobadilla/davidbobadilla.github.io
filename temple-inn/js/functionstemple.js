@@ -331,25 +331,18 @@ window.onload = copyright();
 
 
 function processReservationData() {
-  let reservation = {
-    firstName: $("#fname").value,
-    lastName: $("#lname").value,
-    emailAddress: $("#Email").value,
-    phoneNumber: $("#phone").value,
-    location: $("#city").value,
-    guest: $("#guests").value,
-    checkInDate: $("#resDate").value,
-    checkOutDate: $("#resDate1").value,
-    additionalComments: $("#subject1").value,
-    
+  // let reservation = {
+    sessStore.setItem("firstName: ",$("#fname").value), 
+    sessStore.setItem("lastName: ",$("#lname").value),
+    sessStore.setItem("emailAddress: ",$("#Email").value),
+    sessStore.setItem("phoneNumber: ",$("#phone").value),
+    sessStore.setItem("location: ",$("#city").value),
+    sessStore.setItem("guest: ",$("#guests").value),
+    sessStore.setItem("checkInDate: ",$("#resDate").value),
+    sessStore.setItem("checkOutDate: ",$("#resDate1").value),
+    sessStore.setItem("additionalComments: ",$("#subject1").value);
   }
-  console.log(`Value of reservation object:`);
-  console.log(reservation);
-
-// store to session storage
-  sessStore.setItem("reservation", JSON.stringify(reservation)); 
-  
-}
+    
 
 
 

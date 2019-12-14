@@ -1,4 +1,5 @@
 var sessStore = window.sessionStorage;
+var $ = document.querySelector.bind(document);
 
 buildReservationConfirmation();
 function buildReservationConfirmation() {
