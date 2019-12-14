@@ -1,7 +1,9 @@
 @media only screen and (max-width: 579px) {
   .main-container{
     margin:.9em;
+
 }
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -353,7 +355,7 @@ border: 1px solid #000;
   width: 100%;
 }
 .container1{
-  
+  display:flex;
       border-radius: 5px;
       background-color: #1d51a4;
       padding: 20px;
@@ -364,7 +366,9 @@ border: 1px solid #000;
 .container {
   border-radius: 5px;
   background-color: #f2f2f2;
-  padding: 20px;
+  padding: 4px;
+  display:flex;
+  flex-direction: column;
 }
 
 #lastcontact{
@@ -372,6 +376,12 @@ border: 1px solid #000;
   text-align: center;
   background-color: rgb(179, 10, 10);
   font-size: 20px;
+  display:flex;
+
+}
+#map{
+  height:250px;
+  width: 270px;
 
 }
 
