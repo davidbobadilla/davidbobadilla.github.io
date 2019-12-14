@@ -43,12 +43,12 @@ ul li a{
 }
 ul li{
   font-size: 40px;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 li{
     list-style-type: none;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 .bla{
     color: black;
