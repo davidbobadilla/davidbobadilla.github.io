@@ -69,7 +69,7 @@ margin-left: 10px;
 .navegacion{
   display:flex;
   justify-content: space-evenly;
-  background-color: rgb(35, 175, 175);
+  background-color: rgb(14, 83, 83);
   flex-direction: column;
 
 }
