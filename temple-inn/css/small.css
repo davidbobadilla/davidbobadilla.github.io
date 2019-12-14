@@ -46,24 +46,24 @@ margin-left: 10px;
 .call {
 	position: absolute;
 	top: 420px;
-	right: 100px;
+	right: 30px;
 	background: radial-gradient(rgb(5, 137, 214), #197996);
 	border: 1px solid #000; 
 	padding: .3rem;
 	box-shadow: 0 0 0 #111;
     opacity: .99;
-    font-size: 7px;
+    font-size: 10px;
 }
 .salt {
 	position: absolute;
 	top: 540px;
-	right:70px;
+	right:30px;
 	background: radial-gradient(rgb(5, 137, 214), #197996);
 	border: 1px solid #000; 
 	padding: .4rem;
 	box-shadow: 0 0 6px #111;
     opacity: .99;
-    font-size: 7px;
+    font-size: 10px;
 }
 
 .navegacion{
@@ -345,6 +345,7 @@ border: 1px solid #000;
 }
 #boton{
   background-color: rgb(14, 83, 83);
+  color: white;
 }
 .column img {
   margin-top: 8px;
