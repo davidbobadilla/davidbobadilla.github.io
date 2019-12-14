@@ -385,9 +385,13 @@ border: 1px solid #000;
 }
 
 #resResult{
-  color:rgb(71, 195, 214);
+  color:rgb(255, 255, 255);
   font-size: 18px;
+  background: radial-gradient(rgb(4, 95, 95), #197996);
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border: 1px solid #000; 
 }
+
 .everything7{
   display: grid;
   grid-template-columns: 1fr;
