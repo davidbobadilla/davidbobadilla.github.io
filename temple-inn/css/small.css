@@ -427,6 +427,26 @@ span{
    color: white;
    font-size: 18px;
 }
+
+.everything8{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  background-color: rgb(0, 0, 0);
+}
+#att2{
+  color: black;
+}
+
+#att{
+	background: radial-gradient(rgb(133, 176, 201), #c3d3d8);
+	border: 1px solid #000; 
+	padding: 1.5rem;
+	/* box-shadow: 0 0 30px #111; */
+    opacity: .99;
+    font-size: 18px;
+}
+
 }
 
 
