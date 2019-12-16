@@ -129,9 +129,7 @@ a:hover {
 #att2{
     color: black;
 }
-#att3{
-    color: white;
-}
+
 #foto{
     width: 100%;
     grid-column: 2/5;
