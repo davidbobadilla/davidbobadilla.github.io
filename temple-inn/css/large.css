@@ -126,7 +126,13 @@ a:hover {
     grid-template-rows: 1fr;
     background-color: rgb(0, 0, 0);
 }
-.att2{
+#att2{
+    color: black;
+}
+#att3{
+    color: black;
+}
+#att4{
     color: black;
 }
 
