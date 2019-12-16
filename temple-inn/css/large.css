@@ -120,6 +120,16 @@ a:hover {
     grid-template-rows: 1fr;
     background-color: rgb(0, 0, 0);
 }
+.everything8{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    background-color: rgb(0, 0, 0);
+}
+#att2{
+    color: black;
+}
+
 #foto{
     width: 100%;
     grid-column: 2/5;
@@ -168,7 +178,14 @@ a:hover {
     opacity: .99;
     font-size: 18px;
 }
-
+#att{
+	background: radial-gradient(rgb(133, 176, 201), #c3d3d8);
+	border: 1px solid #000; 
+	padding: 1.5rem;
+	/* box-shadow: 0 0 30px #111; */
+    opacity: .99;
+    font-size: 18px;
+}
 #ser{
     /* color:white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
