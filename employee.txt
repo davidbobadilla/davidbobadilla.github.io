@@ -1,0 +1,24 @@
+
+{
+  "id": 007,
+  "name": "David",
+  "address": {
+    "street": "Trejo",
+    "city": "Rexburg",
+    "zipcode": 83440
+  },
+  "phone": [
+    385-459-2900,
+    208-496-1411
+  ],
+  "role": "Student",
+  "country": [
+    "Mexico",
+    "Argentina"
+  ],
+  "info": {
+    "age": "25 years",
+    "salary": "10 USD an hour"
+    "hair": "black"
+  }
+}
